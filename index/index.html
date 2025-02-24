@@ -16,9 +16,11 @@
         <!-- <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
         <!-- style sheets and font icons  -->
-        <link rel="stylesheet" href="css/consulting.css" />
-        <link rel="stylesheet" href="css/style.css" />
-        <link rel="stylesheet" href="css/responsive.css" />
+        <link rel="preload" href="css/vendors.min.css" as="style" onload="this.rel='stylesheet'"/>
+        <link rel="preload" href="css/icon.min.css" as="style" onload="this.rel='stylesheet'"/>
+        <link rel="preload" href="css/style.css" as="style" onload="this.rel='stylesheet'"/>
+        <link rel="stylesheet" href="css/responsive.css" as="style" />
+        <link rel="stylesheet" href="css/consulting.css" as="style" />
     </head>
     <body data-mobile-nav-style="classic">
         <!-- start header -->
@@ -887,8 +889,5 @@
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/vendors.min.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
-
-        <link rel="stylesheet" href="css/vendors.min.css" />
-        <link rel="stylesheet" href="css/icon.min.css" />
     </body>
 </html>
