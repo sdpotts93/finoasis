@@ -19,11 +19,11 @@
         
         <link rel="stylesheet" href="css/above-the-fold.css" />
 
-        <!-- <link rel="stylesheet" href="css/vendors.min.css"/>
-        <link rel="stylesheet" href="css/icon.min.css"/>
-        <link rel="stylesheet" href="css/style.css"/>
-        <link rel="stylesheet" href="css/responsive.css"/>
-        <link rel="stylesheet" href="demos/consulting/consulting.css" /> -->
+        <!-- <link rel="stylesheet" href="css/vendors.min.css"/> -->
+        <!-- <link rel="stylesheet" href="css/icon.min.css"/> -->
+        <!-- <link rel="stylesheet" href="css/style.css"/> -->
+        <!-- <link rel="stylesheet" href="css/responsive.css"/> -->
+        <!-- <link rel="stylesheet" href="css/consulting.css" /> -->
     </head>
     <body data-mobile-nav-style="classic">
         <!-- <header class="header-with-topbar">
@@ -820,6 +820,34 @@
           </a>
         </div>
         <!-- end scroll progress -->
+        <script>
+            window.addEventListener("load", function () {
+                let loadedCount = 0; // Track loaded stylesheets
+
+                function checkAllLoaded() {
+                    loadedCount++;
+                    if (loadedCount === stylesheets.length) {
+                        window.hasLoadedStyles = true;
+                    }
+                }
+
+                var stylesheets = [
+                    "css/vendors.css",
+                    "css/icon.min.css",
+                    "css/style.css",
+                    "css/responsive.css",
+                    "css/consulting.css"
+                ];
+
+                stylesheets.forEach(function (href) {
+                    var link = document.createElement("link");
+                    link.rel = "stylesheet";
+                    link.href = href;
+                    link.onload = checkAllLoaded; // Fires when the stylesheet is loaded
+                    document.head.appendChild(link);
+                });
+            });
+        </script>
         <!-- javascript libraries -->
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/vendors.min.js"></script>

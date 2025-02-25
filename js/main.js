@@ -782,8 +782,16 @@
 
     // Blog isotope filter 
     if (typeof imagesLoaded === 'function') {
-        $('.blog-wrapper').each(function () {
-            var _this = $(this);
+        $('.blog-wrapper').each((index, element) => setBlogStyles(element));
+        async function setBlogStyles(element) {
+            
+            var _this = $(element);
+        
+            if (!window.hasLoadedStyles) {
+                await new Promise((resolve) => setTimeout(resolve, 300));
+                return setBlogStyles(element);
+            }
+
             _this.imagesLoaded(function () {
                 _this.removeClass('grid-loading');
                 if (typeof $.fn.isotope === 'function') {
@@ -800,10 +808,10 @@
                 isotopeObjs.push(_this);
                 var currentBlogActive = $('.blog-filter > li.active > a').attr('data-filter');
                 if (currentBlogActive != '' && currentBlogActive != undefined) {
-                    _this.isotope({filter: currentBlogActive});
+                    _this.isotope({ filter: currentBlogActive });
                 }
             });
-        });
+        }
     }
 
     $(document).on('click', '.blog-filter > li > a', function () {
