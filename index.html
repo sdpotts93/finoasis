@@ -16,16 +16,17 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <!-- style sheets and font icons  -->
-        <link rel="stylesheet" href="css/vendors.min.css"/>
+        
+        <link rel="stylesheet" href="css/above-the-fold.css" />
+
+        <!-- <link rel="stylesheet" href="css/vendors.min.css"/>
         <link rel="stylesheet" href="css/icon.min.css"/>
         <link rel="stylesheet" href="css/style.css"/>
         <link rel="stylesheet" href="css/responsive.css"/>
-        <link rel="stylesheet" href="demos/consulting/consulting.css" />
+        <link rel="stylesheet" href="demos/consulting/consulting.css" /> -->
     </head>
     <body data-mobile-nav-style="classic">
-        <!-- start header -->
-        <header class="header-with-topbar">
-            <!-- start header top bar -->
+        <!-- <header class="header-with-topbar">
             <div class="header-top-bar top-bar-light bg-white disable-fixed md-border-bottom border-color-transparent-dark-very-light">
                 <div class="container-fluid">
                     <div class="row h-45px align-items-center m-0">
@@ -39,8 +40,7 @@
                     </div>
                 </div>
             </div>
-            <!-- end header top bar -->
-            <!-- start navigation -->
+
             <nav class="navbar navbar-expand-lg header-transparent bg-transparent border-bottom border-color-transparent-white-light disable-fixed">
                 <div class="container-fluid">
                     <div class="col-auto col-lg-2 me-auto">
@@ -109,7 +109,6 @@
                     </div>
                 </div>
             </nav>
-            <!-- start push popup -->
             <div class="push-menu push-menu-style-3 p-50px bg-dark-gray">
                 <span class="close-menu text-dark-gray bg-white"><i class="fa-solid fa-xmark"></i></span>
                 <div class="push-menu-wrapper text-dark-gray" data-scroll-options='{ "theme": "light" }'>
@@ -130,77 +129,13 @@
                     </div>
                 </div>
             </div>
-            <!-- end push popup -->
-        </header>
+        </header> -->
         <!-- end header -->
         <!-- start section -->
-        <section class="p-0 bg-dark-gray">
-            <div class="swiper full-screen bg-dark-gray ipad-top-space-margin md-h-600px sm-h-500px swiper-number-pagination-style-02 magic-cursor light magic-cursor-vertical lg-no-parallax" data-slider-options='{ "slidesPerView": 1, "direction": "horizontal", "loop": true, "parallax": true, "speed": 1000, "pagination": { "el": ".swiper-number", "clickable": true }, "autoplay": { "delay": 40000, "disableOnInteraction": false },  "keyboard": { "enabled": true, "onlyInViewport": true }, "breakpoints": { "1199": { "direction": "vertical" }}, "effect": "slide" }' data-number-pagination="1">
-                <div class="swiper-wrapper">
-                    <!-- start slider item -->
-                    <div class="swiper-slide overflow-hidden">
-                        <div class="cover-background position-absolute top-0 start-0 w-100 h-100" data-swiper-parallax="500" style="background-image:url('https://placehold.co/1920x1080');">
-                            <div class="opacity-light bg-dark-gray"></div>
-                            <div class="container h-100">
-                                <div class="row align-items-center h-100 justify-content-center">
-                                    <div class="col-md-10 position-relative text-white d-flex flex-column justify-content-center h-100 text-center">  
-                                        <div class="alt-font fs-110 xs-fs-80 lh-100 mb-5 xs-mb-35px ls-minus-4px xs-ls-minus-2px text-shadow-double-large transform-origin-right" data-anime='{ "el": "childs", "rotateX": [90, 0], "opacity": [0,1], "staggervalue": 150, "easing": "easeOutQuad" }'>
-                                            <span class="d-inline-block">Professional</span>
-                                            <span class="d-inline-block fw-600">consulting</span>
-                                        </div>
-                                        <div  data-anime='{  "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 300, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                                            <a href="demo-consulting-contact.html" class="btn btn-base-color btn-box-shadow btn-large btn-round-edge">Let's work together</a>
-                                        </div>
-                                        <div data-anime='{ "opacity": [0, 1], "duration": 500, "delay": 1000, "easing": "easeOutQuad" }' class="fs-20 alt-font position-absolute lg-position-relative left-0px right-0px bottom-0 mb-8 lg-mt-40px lg-mb-0 sm-mt-25px w-100 text-shadow-double-large">Request a free <a href="demo-consulting-contact.html" class="text-decoration-line-bottom text-white fw-500">business consulting!</a></div>
-                                    </div>
-                                </div> 
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end slider item -->
-                    <!-- start slider item -->
-                    <div class="swiper-slide overflow-hidden">
-                        <div class="cover-background position-absolute top-0 start-0 w-100 h-100" data-swiper-parallax="500" style="background-image:url('https://placehold.co/1920x1080');">
-                            <div class="opacity-light bg-dark-gray"></div>
-                            <div class="container h-100">
-                                <div class="row align-items-center h-100 justify-content-center">
-                                    <div class="col-md-10 position-relative text-white d-flex flex-column justify-content-center h-100 text-center">  
-                                        <div class="alt-font fs-110 xs-fs-80 lh-100 mb-5 xs-mb-35px ls-minus-4px xs-ls-minus-2px text-shadow-double-large" data-anime='{ "el": "childs", "rotateX": [90, 0], "opacity": [0,1], "staggervalue": 150, "easing": "easeOutQuad" }'>
-                                            <span class="d-inline-block">Contribute</span><br>
-                                            <span class="fw-600 d-inline-block">guidance</span>
-                                        </div> 
-                                        <div data-anime='{  "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 300, "staggervalue": 300, "easing": "easeOutQuad" }'><a href="demo-consulting-contact.html" class="btn btn-base-color btn-box-shadow btn-large btn-round-edge">Let's work together</a></div>
-                                        <div data-anime='{ "opacity": [0, 1], "duration": 500, "delay": 1000, "easing": "easeOutQuad" }' class="fs-20 alt-font position-absolute lg-position-relative left-0px right-0px bottom-0 mb-8 lg-mt-40px lg-mb-0 sm-mt-25px w-100 text-shadow-double-large">Discover our <a href="demo-consulting-process.html" class="text-decoration-line-bottom text-white fw-500">business process!</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end slider item -->
-                    <!-- start slider item -->
-                    <div class="swiper-slide overflow-hidden">
-                        <div class="cover-background position-absolute top-0 start-0 w-100 h-100" data-swiper-parallax="500" style="background-image:url('https://placehold.co/1920x1080');">
-                            <div class="opacity-light bg-dark-gray"></div>
-                            <div class="container h-100">
-                                <div class="row align-items-center h-100 justify-content-center">
-                                    <div class="col-md-10 position-relative text-white d-flex flex-column justify-content-center h-100 text-center">  
-                                        <div class="alt-font fs-110 xs-fs-80 lh-100 mb-5 xs-mb-35px ls-minus-4px xs-ls-minus-2px text-shadow-double-large" data-anime='{ "el": "childs", "rotateX": [90, 0], "opacity": [0,1], "staggervalue": 150, "easing": "easeOutQuad" }'>
-                                            <span class="d-inline-block">Business</span><br>
-                                            <span class="fw-600 d-inline-block">strategies</span>
-                                        </div> 
-                                        <div data-anime='{  "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 300, "staggervalue": 300, "easing": "easeOutQuad" }'><a href="demo-consulting-contact.html" class="btn btn-base-color btn-box-shadow btn-large btn-round-edge">Let's work together</a></div>
-                                        <div data-anime='{ "opacity": [0, 1], "duration": 500, "delay": 1000, "easing": "easeOutQuad" }' class="fs-20 alt-font position-absolute lg-position-relative left-0px right-0px bottom-0 mb-8 lg-mt-40px lg-mb-0 sm-mt-25px w-100 text-shadow-double-large">Become a part of <a href="demo-consulting-company.html" class="text-decoration-line-bottom text-white fw-500">business venture!</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end slider item -->
-                </div>
-                <!-- start slider pagination -->
-                <div class="swiper-pagination container swiper-pagination-clickable swiper-pagination-bullets-right swiper-number"></div> 
-                <!-- end slider pagination --> 
-            </div>
+        <section>
+           <div class="hero-section">
+                HELLO
+           </div>
         </section>
         <!-- end section -->
         <!-- start section -->
