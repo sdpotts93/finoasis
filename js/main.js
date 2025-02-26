@@ -19,7 +19,7 @@
 
     var menuBreakPoint = 991;
     var sliderBreakPoint = 991; // It will effect when you have used attribute "data-thumb-slider-md-direction" OR "data-slider-md-direction"
-    var animeBreakPoint = 1199;
+    var animeBreakPoint = 0;
     var headerTransition = 300;  // Header transition effect time
 
     /* ===================================
@@ -1304,8 +1304,9 @@
     $dataAnimeElements.each(function () {
         const $self = $(this);
         const animeOptions = $self.data('anime');
+        const hideInMobile = $self.data('hide-mobile')
 
-        if (animeOptions && getWindowWidth() > animeBreakPoint) {
+        if (animeOptions && getWindowWidth() > animeBreakPoint && !hideInMobile) {
             try {
                 const effect = animeOptions.effect && animeOptions.effect.toLowerCase();
 
@@ -1329,7 +1330,7 @@
             }
         } else {
             $self.removeAttr('data-anime');
-            $("body").addClass("no-animation");
+            // $("body").addClass("no-animation");
         }
     });
 
@@ -2195,7 +2196,7 @@
      Window on load
      ====================================== */
 
-    (function initialLoad() {
+    (function () {
 
         // Bootstrap tooltip
         var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
