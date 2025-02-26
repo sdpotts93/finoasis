@@ -82,6 +82,10 @@ section {
   padding-bottom: 0px;
 }
 
+section.hero-section {
+  padding: 0 !important;
+  font-family: Arial;
+}
 img {
   max-width: 100%;
   height: auto;
