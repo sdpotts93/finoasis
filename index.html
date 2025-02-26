@@ -568,6 +568,13 @@
                 padding-top: 0px;
                 padding-bottom: 0px;
             }
+            .scroll-progress {
+                visibility: hidden;
+            }
+
+            .scroll-progress.loaded {
+                visibility: visible;
+            }
         </style>
     </head>
     <body data-mobile-nav-style="classic">
@@ -964,7 +971,7 @@
                                 </span>
                             </a>
                             <span class="opacity-6 ls-2px text-uppercase alt-font text-white d-block mb-2 fw-500">Supporting your business goal</span>
-                            <h1 class="text-white fw-500 alt-font ls-minus-2px text-shadow-double-large">Some of the worldwide clients we've helped.</h1>
+                            <h2 class="text-white fw-500 alt-font ls-minus-2px text-shadow-double-large">Some of the worldwide clients we've helped.</h2>
                         </div>
                     </div>
                     <div class="row row-cols-1 row-cols-lg-4 row-cols-sm-2 text-center justify-content-center clients-style-06 position-relative">
@@ -1270,6 +1277,7 @@
             <span class="scroll-text">Scroll</span><span class="scroll-line"><span class="scroll-point"></span></span>
           </a>
         </div>
+
         </div>
         <!-- end scroll progress -->
         <!-- javascript libraries -->
@@ -1312,7 +1320,7 @@
                 });
 
                 function showContent() {
-                    let elements = document.querySelectorAll("body");
+                    let elements = document.querySelectorAll("body, .scroll-progress");
                     elements.forEach(item => {
                         item.classList.add("loaded");
                     })
