@@ -843,7 +843,12 @@
                     var link = document.createElement("link");
                     link.rel = "stylesheet";
                     link.href = href;
-                    link.onload = checkAllLoaded; // Fires when the stylesheet is loaded
+                    link.media = "print"; // Trick: CSS will not block rendering
+                    link.onload = function () {
+                        this.onload = null;
+                        this.media = "all"; // Apply styles after loading
+                        checkAllLoaded();
+                    };
                     document.head.appendChild(link);
                 });
             });
