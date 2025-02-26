@@ -16,12 +16,12 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <!-- style sheets and font icons  -->
-        <!-- <link rel="stylesheet" href="css/vendors.min.css"/> -->
+        <link rel="stylesheet" href="css/vendors.min.css"/>
         <!-- <link rel="stylesheet" href="css/icon.min.css"/> -->
-        <!-- <link rel="stylesheet" href="css/style.min.css"/>
+        <link rel="stylesheet" href="css/style.min.css"/>
         <link rel="stylesheet" href="css/responsive.min.css"/>
-        <link rel="stylesheet" href="css/consulting.css" /> -->
-        <style>
+        <link rel="stylesheet" href="css/consulting.css" />
+        <!-- <style>
             .loading {
                 opacity: 0;
                 transition: opacity 0.3s ease-in;
@@ -42,14 +42,14 @@
                 opacity: 1;
                 pointer-events: none;
             }
-        </style>
+        </style> -->
     </head>
     <body data-mobile-nav-style="classic">
-        <div class="loader">
+        <!-- <div class="loader">
             <span>
                 THIS IS THE MAIN THING
             </span>
-        </div> 
+        </div>  -->
         <div class="page-content loading">
         <!-- start header -->
         <header class="header-with-topbar">
@@ -915,7 +915,10 @@
         </div>
         <!-- end scroll progress -->
         <!-- javascript libraries -->
-        <script>
+<script defer src="js/jquery.js"></script>
+<script defer src="js/vendors.min.js"></script>
+<script defer src="js/main.js"></script>
+        <!-- <script>
             window.addEventListener("load", function () {
                 console.log("✅ Page loaded, now loading stylesheets...");
 
@@ -971,6 +974,6 @@
                     document.body.appendChild(script);
                 }
             });
-        </script>
+        </script> -->
     </body>
 </html>
