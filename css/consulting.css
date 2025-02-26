@@ -4,11 +4,13 @@
 /* font */
 /* variable */
 :root {     
-    --base-color: #dd6531;
+    --base-color: #6064D3;
     --dark-gray: #292d36;
     --medium-gray: #808291;
     --primary-font: Lexend, sans-serif;
     --alt-font: Lexend, sans-serif;
+    --orange: #FF6F00;
+    --green: #00F4AB;
 }
 /* reset */
 body {
@@ -23,7 +25,7 @@ a {
     background-image: linear-gradient(to right top, #353332, #312b28, #15110f, #4a3229, #5a2611);
 }
 .bg-gradient-dark-orange-transparent { 
-    background-image: linear-gradient(to right top, rgba(212, 110, 66,.8), rgba(197, 105, 66,.8), rgba(184, 101, 66,.8), rgba(158, 93, 67,.8), rgba(111, 80, 70,.8));
+    background-image: linear-gradient(to right top, rgba(96, 100, 211, .8), rgba(71, 73, 143, 0.8), rgba(56, 58, 127, 0.8), rgba(58, 61, 130, 0.8), rgba(49, 51, 97, 0.8));
 }
 /* header */
 .header-icon .icon > a {

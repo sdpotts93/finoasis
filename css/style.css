@@ -12625,14 +12625,14 @@ blockquote footer {
 }
 
 .btn.btn-dark-gray {
-  background-color: var(--dark-gray);
+  background-color: var(--orange);
   color: var(--white);
 }
 
 .btn.btn-dark-gray:active,
 .btn.btn-dark-gray:hover {
   background-color: transparent;
-  border-color: var(--dark-gray);
+  border-color: var(--orange);
   color: var(--dark-gray);
 }
 
@@ -13075,8 +13075,8 @@ blockquote footer {
 
 .btn.btn-box-shadow.btn-dark-gray:active,
 .btn.btn-box-shadow.btn-dark-gray:hover {
-  background: var(--dark-gray);
-  color: var(--white);
+  background: #ff6f0030;
+  color: var(--dark-gray);
 }
 
 .btn.btn-box-shadow.btn-base-color:active,
