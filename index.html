@@ -20,8 +20,13 @@
         <link rel="stylesheet" href="css/responsive.min.css"/>
         <link rel="stylesheet" href="css/consulting.css" /> -->
         <style>
+            *, ::after, ::before {
+                box-sizing: border-box;
+            }
             body {
                 overflow: hidden;
+                font-size: 17px;
+                line-height: 30px;
             }
             body.loaded {
                 overflow: auto;
@@ -40,7 +45,6 @@
             section.hero-section {
                 position: relative;
                 height: 100vh;
-                font-size: 50px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -49,7 +53,6 @@
                 z-index: 1;
                 padding-top: 0px;
                 padding-bottom: 0px;
-                line-height: 1.4;
             }
         </style>
     </head>
