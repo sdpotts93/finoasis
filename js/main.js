@@ -20,6 +20,7 @@
     var menuBreakPoint = 991;
     var sliderBreakPoint = 991; // It will effect when you have used attribute "data-thumb-slider-md-direction" OR "data-slider-md-direction"
     var animeBreakPoint = 0;
+    var mobileBreakPoint = 1199;
     var headerTransition = 300;  // Header transition effect time
 
     /* ===================================
@@ -1306,7 +1307,7 @@
         const animeOptions = $self.data('anime');
         const hideInMobile = $self.data('hide-mobile')
 
-        if (animeOptions && getWindowWidth() > animeBreakPoint && !hideInMobile) {
+        if (animeOptions && (getWindowWidth() > mobileBreakPoint || !hideInMobile)) {
             try {
                 const effect = animeOptions.effect && animeOptions.effect.toLowerCase();
 

@@ -1,17 +1,7 @@
-body,
-html {
-  font-size: 16px;
-}
-
 footer,
 section {
   padding-top: 110px;
   padding-bottom: 110px;
-}
-
-a,
-body {
-  color: var(--medium-gray);
 }
 
 .btn.btn-link,
@@ -23,17 +13,6 @@ a:hover {
   text-decoration: none;
 }
 
-.container,
-.container-fluid,
-.container-lg,
-.container-md,
-.container-sm,
-.container-xl,
-.container-xxl,
-.row>* {
-  padding-right: 15px;
-  padding-left: 15px;
-}
 
 .blog-only-text .card-body:hover .card-title,
 .text-shadow-large {
@@ -47,13 +26,11 @@ a:hover {
 
 :root {
   --alt-font: "Plus Jakarta Sans", sans-serif;
-  --primary-font: "Inter", sans-serif;
   --base-color: #2946f3;
   --white: #ffffff;
   --black: #000000;
   --red: #dc3131;
   --light-red: #feedec;
-  --green: #2ebb79;
   --crusoe-green: #d39121;
   --yellow: #ffea23;
   --dark-gray: #232323;
@@ -77,7 +54,6 @@ a:hover {
   --white-ice: #d8f5ef;
   --cornflower-blue: #445fed;
   --jade: #00af6b;
-  --orange: #ef991f;
   --majorelle-blue: #724ade;
   --light-majorelle-blue: #f2edfe;
   --spring-wood: #f9f6f3;
@@ -93,15 +69,6 @@ a:hover {
 
 .primary-font {
   font-family: var(--primary-font) !important;
-}
-
-body {
-  font-family: var(--primary-font);
-  line-height: 30px;
-  font-weight: 400;
-  -moz-osx-font-smoothing: grayscale;
-  word-break: break-word;
-  -webkit-font-smoothing: antialiased;
 }
 
 section.half-section {
@@ -215,13 +182,11 @@ video {
   padding-left: 10px;
 }
 
-.h1,
 .h2,
 .h3,
 .h4,
 .h5,
 .h6,
-h1,
 h2,
 h3,
 h4,
@@ -230,12 +195,6 @@ h6 {
   margin-bottom: 30px;
   letter-spacing: -0.5px;
   font-weight: inherit;
-}
-
-.h1,
-h1 {
-  font-size: 4.375rem;
-  line-height: 4.375rem;
 }
 
 .h2,
@@ -13079,11 +13038,11 @@ blockquote footer {
   color: var(--dark-gray);
 }
 
-.btn.btn-box-shadow.btn-base-color:active,
+/* .btn.btn-box-shadow.btn-base-color:active,
 .btn.btn-box-shadow.btn-base-color:hover {
   background: var(--base-color);
   color: var(--white);
-}
+} */
 
 .btn.btn-box-shadow.btn-cornflower-blue:active,
 .btn.btn-box-shadow.btn-cornflower-blue:hover {
@@ -22965,5 +22924,3 @@ footer .footer-navbar .nav-item:last-child a {
 .footer-demo img {
   max-height: 55px !important;
 }
-
-/*# sourceMappingURL=style.min.css.map */

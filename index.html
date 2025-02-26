@@ -31,7 +31,16 @@
 
             :root {
                 --header-height: 100px;
+                --base-color: #6064D3;
+                --dark-gray: #292d36;
+                --medium-gray: #808291;
+                --primary-font: Lexend, sans-serif;
+                --alt-font: Lexend, sans-serif;
+                --orange: #FF6F00;
+                --green: #00F4AB;
+                --white: #ffffff;
             }
+
             @font-face {
                 font-family: "Lexend";
                 src: url("fonts/lexend.woff2") format("woff2");
@@ -554,32 +563,49 @@
                 line-height: 30px;
                 margin: 0;
                 padding: 0;
+                line-height: 30px;
+                font-weight: 400;
+                -moz-osx-font-smoothing: grayscale;
+                word-break: break-word;
+                -webkit-font-smoothing: antialiased;
+                font-family: var(--primary-font);
+                color: var(--medium-gray);
             }
+
             body.loaded {
                 overflow: auto;
             }
 
-            .header-with-topbar {
-                opacity: 0;
+            header {
                 transition: opacity 0.3s ease-in;
-                position: fixed;
+                position: sticky;
                 top: 0;
+                z-index: 10;
             }
-            .header-with-topbar.loaded {
-                opacity: 1;
-            }
+
 
             section.hero-section {
                 position: relative;
                 height: 100vh;
                 display: flex;
-                justify-content: center;
-                align-items: center;
+                align-items: flex-start;
                 width: 100vw;
                 background-color: white;
                 z-index: 1;
-                padding-top: 0px;
+                padding-top: calc(var(--header-height) + 20vh);
                 padding-bottom: 0px;
+                margin-top: calc(var(--header-height) * -1);
+            }
+
+            section.hero-section .container {
+                
+            }
+            section.hero-section .container p {
+                margin-top: 30px;
+                font-size: 1.4rem;
+                line-height: 1.76;
+                width: 40vw;
+                margin-bottom: 30px;
             }
 
             .collapsing {
@@ -595,13 +621,182 @@
             }
             .logo-container svg {
                 height: auto;
-                width: 400px;
+                width: 300px;
                 overflow: visible;
             }
+
+            .container,
+            .container-fluid,
+            .container-xxl,
+            .container-xl,
+            .container-lg,
+            .container-md,
+            .container-sm {
+            --bs-gutter-x: 1.5rem;
+            --bs-gutter-y: 0;
+            width: 100%;
+            padding-right: calc(var(--bs-gutter-x) * 0.5);
+            padding-left: calc(var(--bs-gutter-x) * 0.5);
+            margin-right: auto;
+            margin-left: auto;
+            }
+            .container,
+            .container-fluid,
+            .container-lg,
+            .container-md,
+            .container-sm,
+            .container-xl,
+            .container-xxl,
+            .row>* {
+            padding-right: 15px;
+            padding-left: 15px;
+            }
+
+            @media (min-width: 576px) {
+            .container-sm, .container {
+                max-width: 540px;
+            }
+            }
+            @media (min-width: 768px) {
+            .container-md, .container-sm, .container {
+                max-width: 720px;
+            }
+            }
+            @media (min-width: 992px) {
+            .container-lg, .container-md, .container-sm, .container {
+                max-width: 960px;
+            }
+            }
+            @media (min-width: 1200px) {
+            .container-xl, .container-lg, .container-md, .container-sm, .container {
+                max-width: 1140px;
+            }
+            }
+            @media (min-width: 1400px) {
+            .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+                max-width: 1220px;
+            }
+            }
+
+            .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+            }
+
+   
+            h1 {
+                margin: 0;
+                font-size: clamp(16px, calc(2.5vw + 2.5vh + 0.5vmin), 100px);
+                line-height: 1.2;
+                color: var(--dark-gray);
+                max-width: 70%;
+                letter-spacing: -2px;
+                font-weight: 600;
+            }
+
+            h1 span {
+                display: inline-flex;
+                flex-direction: column;
+                max-height: 1.2em;
+                overflow: hidden;
+                vertical-align: bottom;
+                text-align: left;
+            }
+
+            .btn {
+                --bs-btn-padding-x: 0.75rem;
+                --bs-btn-padding-y: 0.375rem;
+                --bs-btn-font-family: ;
+                --bs-btn-font-size: 1rem;
+                --bs-btn-font-weight: 400;
+                --bs-btn-line-height: 1.5;
+                --bs-btn-color: var(--bs-body-color);
+                --bs-btn-bg: transparent;
+                --bs-btn-border-width: var(--bs-border-width);
+                --bs-btn-border-color: transparent;
+                --bs-btn-border-radius: var(--bs-border-radius);
+                --bs-btn-hover-border-color: transparent;
+                --bs-btn-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+                --bs-btn-disabled-opacity: 0.65;
+                --bs-btn-focus-box-shadow: 0 0 0 0.25rem rgba(var(--bs-btn-focus-shadow-rgb), .5);
+                display: inline-block;
+                padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x);
+                font-family: var(--bs-btn-font-family);
+                font-size: var(--bs-btn-font-size);
+                font-weight: var(--bs-btn-font-weight);
+                line-height: var(--bs-btn-line-height);
+                color: var(--bs-btn-color);
+                text-align: center;
+                text-decoration: none;
+                vertical-align: middle;
+                cursor: pointer;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                user-select: none;
+                border: var(--bs-btn-border-width) solid var(--bs-btn-border-color);
+                border-radius: var(--bs-btn-border-radius);
+                background-color: var(--bs-btn-bg);
+                transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+                display: inline-block; 
+                font-weight: 500;   
+            }
+
+            .btn-box-shadow {
+                -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+                box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+                -webkit-transition: all 0.3scubic-bezier(0.2, 0, 0.3, 1);
+                transition: all 0.3s
+            }
+
+            .btn {
+                border: 2px solid transparent;
+                border-radius: 0;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                width: auto;
+                font-family: var(--alt-font);
+                -webkit-transition: all 0.3sease-in-out;
+                transition: all 0.3sease-in-out;
+            }
+
+            .btn.btn-base-color {
+                background-color: var(--base-color);
+                color: var(--white);
+            }
+
+            .btn.btn-large {
+                font-size: 14px;
+                padding: 18px 34px;
+            }
+
+            .btn.btn-round-edge {
+                -webkit-border-radius: 4px;
+                border-radius: 4px;
+            }
+
+            .btn.btn-base-color:active, .btn.btn-base-color:hover {
+                background-color: transparent;
+                border-color: var(--base-color);
+                color: var(--base-color);
+            }
+
+            .btn.btn-box-shadow.btn-base-color:active, .btn.btn-box-shadow.btn-base-color:hover {
+                background: #6064d33a;
+                color: var(--dark-gray);
+            }
+
+
+
         </style>
     </head>
     <body data-mobile-nav-style="classic">
-        <header>
+        <header class="container">
             <div class="top-header">
 
             </div>
@@ -652,7 +847,21 @@
         <!-- end header -->
         <!-- start section -->
         <section class="hero-section">
-            THIS IS THE FCP ELEMENT
+            <div class="container">
+                <h1 class="hero-title">
+                    Inversiones Estratégicas
+                    para crecer tu 
+                    <span>
+                        patrimonio
+                    </span>
+                </h1>
+                <p>
+                    Wealth planning de clase mundial, diseñado para tu tranquilidad financiera.
+                </p>
+                <a href="/contact" class="btn btn-base-color btn-box-shadow btn-large btn-round-edge">
+                    Empieza a crecer tu patrimonio
+                </a>
+            </div>
         </section> 
         <!-- end section -->
         <!-- start section -->
@@ -1352,7 +1561,7 @@
                 console.log("✅ Page loaded, now loading stylesheets...");
 
                 let stylesheets = [
-                    "css/vendors.min.css",
+                    "css/vendors.css",
                     "css/style.css",
                     "css/responsive.min.css",
                     "css/consulting.css"
