@@ -943,11 +943,7 @@
                     var link = document.createElement("link");
                     link.rel = "stylesheet";
                     link.href = href;
-                    link.media = "print"; // Prevent render-blocking
-                    link.onload = function () {
-                        this.media = "all"; // Apply styles after loading
-                        checkAllStylesLoaded();
-                    };
+                    link.onload = checkAllStylesLoaded;
                     document.head.appendChild(link);
                 });
 
