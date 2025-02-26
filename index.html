@@ -23,8 +23,8 @@
         <link rel="stylesheet" href="css/consulting.css" /> -->
         <style>
             .loading {
-                visibility: hidden;
                 opacity: 0;
+                transition: opacity 0.5s ease-in;
             }
             .loader {
                 position: fixed;
@@ -38,6 +38,9 @@
                 align-items: center;
                 font-family: Arial;
                 font-size: 30px;
+                transition: opacity 0.5s ease-in;
+                opacity: 1;
+                pointer-events: none;
             }
         </style>
     </head>
@@ -947,10 +950,15 @@
                     document.head.appendChild(link);
                 });
 
+                function showContent() {
+                    document.querySelector(".loader").style.opacity = 0;
+                    document.querySelector(".loading").style.opacity = 1;
+                }
                 // Function to load scripts sequentially
                 function loadScriptsSequentially(scripts) {
                     if (scripts.length === 0) {
                         console.log("✅ All scripts loaded in order.");
+                        showContent();
                         return;
                     }
 
