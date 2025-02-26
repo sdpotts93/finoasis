@@ -16,33 +16,40 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <!-- style sheets and font icons  -->
-        <link rel="stylesheet" href="css/vendors.min.css"/>
+        <!-- <link rel="stylesheet" href="css/vendors.min.css"/>
         <link rel="stylesheet" href="css/icon.min.css"/>
         <link rel="stylesheet" href="css/style.min.css"/>
         <link rel="stylesheet" href="css/responsive.min.css"/>
-        <link rel="stylesheet" href="css/consulting.css" />
-        <!-- <style>
-            .loading {
+        <link rel="stylesheet" href="css/consulting.css" /> -->
+        <style>
+            body {
+                overflow: hidden;
+            }
+            body.loaded {
+                overflow: auto;
+            }
+
+            .header-with-topbar {
                 opacity: 0;
                 transition: opacity 0.3s ease-in;
+
             }
-            .loader {
-                position: fixed;
-                top: 0;
-                height: 100dvh;
-                width: 100vw;
-                z-index: 1;
-                background-color: white;
+            .header-with-topbar.loaded {
+                opacity: 1;
+            }
+
+            .hero-section {
+                position: relative;
+                height: 100vh;
+                font-size: 50px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                font-family: Arial;
-                font-size: 30px;
-                transition: opacity 0.3s ease-in;
-                opacity: 1;
-                pointer-events: none;
+                width: 100vw;
+                background-color: white;
+                z-index: 1;
             }
-        </style> -->
+        </style>
     </head>
     <body data-mobile-nav-style="classic">
         <!-- <div class="loader">
@@ -162,74 +169,9 @@
         </header>
         <!-- end header -->
         <!-- start section -->
-        <section class="p-0 bg-dark-gray">
-            <div class="swiper full-screen bg-dark-gray ipad-top-space-margin md-h-600px sm-h-500px swiper-number-pagination-style-02 magic-cursor light magic-cursor-vertical lg-no-parallax" data-slider-options='{ "slidesPerView": 1, "direction": "horizontal", "loop": true, "parallax": true, "speed": 1000, "pagination": { "el": ".swiper-number", "clickable": true }, "autoplay": { "delay": 40000, "disableOnInteraction": false },  "keyboard": { "enabled": true, "onlyInViewport": true }, "breakpoints": { "1199": { "direction": "vertical" }}, "effect": "slide" }' data-number-pagination="1">
-                <div class="swiper-wrapper">
-                    <!-- start slider item -->
-                    <div class="swiper-slide overflow-hidden">
-                        <div class="cover-background position-absolute top-0 start-0 w-100 h-100" data-swiper-parallax="500" style="background-image:url('https://placehold.co/1920x1080');">
-                            <div class="opacity-light bg-dark-gray"></div>
-                            <div class="container h-100">
-                                <div class="row align-items-center h-100 justify-content-center">
-                                    <div class="col-md-10 position-relative text-white d-flex flex-column justify-content-center h-100 text-center">  
-                                        <div class="alt-font fs-110 xs-fs-80 lh-100 mb-5 xs-mb-35px ls-minus-4px xs-ls-minus-2px text-shadow-double-large transform-origin-right" data-anime='{ "el": "childs", "rotateX": [90, 0], "opacity": [0,1], "staggervalue": 150, "easing": "easeOutQuad" }'>
-                                            <span class="d-inline-block">Professional</span>
-                                            <span class="d-inline-block fw-600">consulting</span>
-                                        </div>
-                                        <div  data-anime='{  "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 300, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                                            <a href="demo-consulting-contact.html" class="btn btn-base-color btn-box-shadow btn-large btn-round-edge">Let's work together</a>
-                                        </div>
-                                        <div data-anime='{ "opacity": [0, 1], "duration": 500, "delay": 1000, "easing": "easeOutQuad" }' class="fs-20 alt-font position-absolute lg-position-relative left-0px right-0px bottom-0 mb-8 lg-mt-40px lg-mb-0 sm-mt-25px w-100 text-shadow-double-large">Request a free <a href="demo-consulting-contact.html" class="text-decoration-line-bottom text-white fw-500">business consulting!</a></div>
-                                    </div>
-                                </div> 
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end slider item -->
-                    <!-- start slider item -->
-                    <div class="swiper-slide overflow-hidden">
-                        <div class="cover-background position-absolute top-0 start-0 w-100 h-100" data-swiper-parallax="500" style="background-image:url('https://placehold.co/1920x1080');">
-                            <div class="opacity-light bg-dark-gray"></div>
-                            <div class="container h-100">
-                                <div class="row align-items-center h-100 justify-content-center">
-                                    <div class="col-md-10 position-relative text-white d-flex flex-column justify-content-center h-100 text-center">  
-                                        <div class="alt-font fs-110 xs-fs-80 lh-100 mb-5 xs-mb-35px ls-minus-4px xs-ls-minus-2px text-shadow-double-large" data-anime='{ "el": "childs", "rotateX": [90, 0], "opacity": [0,1], "staggervalue": 150, "easing": "easeOutQuad" }'>
-                                            <span class="d-inline-block">Contribute</span><br>
-                                            <span class="fw-600 d-inline-block">guidance</span>
-                                        </div> 
-                                        <div data-anime='{  "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 300, "staggervalue": 300, "easing": "easeOutQuad" }'><a href="demo-consulting-contact.html" class="btn btn-base-color btn-box-shadow btn-large btn-round-edge">Let's work together</a></div>
-                                        <div data-anime='{ "opacity": [0, 1], "duration": 500, "delay": 1000, "easing": "easeOutQuad" }' class="fs-20 alt-font position-absolute lg-position-relative left-0px right-0px bottom-0 mb-8 lg-mt-40px lg-mb-0 sm-mt-25px w-100 text-shadow-double-large">Discover our <a href="demo-consulting-process.html" class="text-decoration-line-bottom text-white fw-500">business process!</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end slider item -->
-                    <!-- start slider item -->
-                    <div class="swiper-slide overflow-hidden">
-                        <div class="cover-background position-absolute top-0 start-0 w-100 h-100" data-swiper-parallax="500" style="background-image:url('https://placehold.co/1920x1080');">
-                            <div class="opacity-light bg-dark-gray"></div>
-                            <div class="container h-100">
-                                <div class="row align-items-center h-100 justify-content-center">
-                                    <div class="col-md-10 position-relative text-white d-flex flex-column justify-content-center h-100 text-center">  
-                                        <div class="alt-font fs-110 xs-fs-80 lh-100 mb-5 xs-mb-35px ls-minus-4px xs-ls-minus-2px text-shadow-double-large" data-anime='{ "el": "childs", "rotateX": [90, 0], "opacity": [0,1], "staggervalue": 150, "easing": "easeOutQuad" }'>
-                                            <span class="d-inline-block">Business</span><br>
-                                            <span class="fw-600 d-inline-block">strategies</span>
-                                        </div> 
-                                        <div data-anime='{  "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 300, "staggervalue": 300, "easing": "easeOutQuad" }'><a href="demo-consulting-contact.html" class="btn btn-base-color btn-box-shadow btn-large btn-round-edge">Let's work together</a></div>
-                                        <div data-anime='{ "opacity": [0, 1], "duration": 500, "delay": 1000, "easing": "easeOutQuad" }' class="fs-20 alt-font position-absolute lg-position-relative left-0px right-0px bottom-0 mb-8 lg-mt-40px lg-mb-0 sm-mt-25px w-100 text-shadow-double-large">Become a part of <a href="demo-consulting-company.html" class="text-decoration-line-bottom text-white fw-500">business venture!</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end slider item -->
-                </div>
-                <!-- start slider pagination -->
-                <div class="swiper-pagination container swiper-pagination-clickable swiper-pagination-bullets-right swiper-number"></div> 
-                <!-- end slider pagination --> 
-            </div>
-        </section>
+        <section class="hero-section">
+            THIS IS THE FCP ELEMENT
+        </section> 
         <!-- end section -->
         <!-- start section -->
         <section class="position-relative overflow-hidden">
@@ -915,18 +857,17 @@
         </div>
         <!-- end scroll progress -->
         <!-- javascript libraries -->
-<script defer src="js/jquery.js"></script>
+<!-- <script defer src="js/jquery.js"></script>
 <script defer src="js/vendors.min.js"></script>
-<script defer src="js/main.js"></script>
-        <!-- <script>
+<script defer src="js/main.js"></script> -->
+        <script>
             window.addEventListener("load", function () {
                 console.log("✅ Page loaded, now loading stylesheets...");
 
                 let stylesheets = [
-                    "css/vendors.css",
-                    "css/icon.min.css",
-                    "css/style.css",
-                    "css/responsive.css",
+                    "css/vendors.min.css",
+                    "css/style.min.css",
+                    "css/responsive.min.css",
                     "css/consulting.css"
                 ];
 
@@ -954,8 +895,10 @@
                 });
 
                 function showContent() {
-                    document.querySelector(".loader").style.opacity = 0;
-                    document.querySelector(".loading").style.opacity = 1;
+                    let elements = document.querySelectorAll("body, .header-with-topbar");
+                    elements.forEach(item => {
+                        item.classList.add("loaded");
+                    })
                 }
                 // Function to load scripts sequentially
                 function loadScriptsSequentially(scripts) {
@@ -974,6 +917,6 @@
                     document.body.appendChild(script);
                 }
             });
-        </script> -->
+        </script>
     </body>
 </html>
