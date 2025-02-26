@@ -16,13 +16,38 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <!-- style sheets and font icons  -->
-        <link rel="stylesheet" href="css/vendors.min.css"/>
-        <link rel="stylesheet" href="css/icon.min.css"/>
-        <link rel="stylesheet" href="css/style.min.css"/>
+        <!-- <link rel="stylesheet" href="css/vendors.min.css"/> -->
+        <!-- <link rel="stylesheet" href="css/icon.min.css"/> -->
+        <!-- <link rel="stylesheet" href="css/style.min.css"/>
         <link rel="stylesheet" href="css/responsive.min.css"/>
-        <link rel="stylesheet" href="css/consulting.css" />
+        <link rel="stylesheet" href="css/consulting.css" /> -->
+        <style>
+            .loading {
+                visibility: hidden;
+                opacity: 0;
+            }
+            .loader {
+                position: fixed;
+                top: 0;
+                height: 100dvh;
+                width: 100vw;
+                z-index: 1;
+                background-color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: Arial;
+                font-size: 30px;
+            }
+        </style>
     </head>
     <body data-mobile-nav-style="classic">
+        <div class="loader">
+            <span>
+                THIS IS THE MAIN THING
+            </span>
+        </div> 
+        <div class="page-content loading">
         <!-- start header -->
         <header class="header-with-topbar">
             <!-- start header top bar -->
@@ -884,10 +909,64 @@
             <span class="scroll-text">Scroll</span><span class="scroll-line"><span class="scroll-point"></span></span>
           </a>
         </div>
+        </div>
         <!-- end scroll progress -->
         <!-- javascript libraries -->
-        <script type="text/javascript" src="js/jquery.js"></script>
-        <script type="text/javascript" src="js/vendors.min.js"></script>
-        <script type="text/javascript" src="js/main.js"></script>
+        <script>
+            window.addEventListener("load", function () {
+                console.log("✅ Page loaded, now loading stylesheets...");
+
+                let stylesheets = [
+                    "css/vendors.css",
+                    "css/icon.min.css",
+                    "css/style.css",
+                    "css/responsive.css",
+                    "css/consulting.css"
+                ];
+
+                let loadedCount = 0;
+
+                function checkAllStylesLoaded() {
+                    loadedCount++;
+                    if (loadedCount === stylesheets.length) {
+                        console.log("✅ All stylesheets loaded, now loading scripts in order...");
+                        loadScriptsSequentially([
+                            "js/jquery.js",
+                            "js/vendors.min.js",
+                            "js/main.js"
+                        ]);
+                    }
+                }
+
+                // Load styles asynchronously
+                stylesheets.forEach(function (href) {
+                    var link = document.createElement("link");
+                    link.rel = "stylesheet";
+                    link.href = href;
+                    link.media = "print"; // Prevent render-blocking
+                    link.onload = function () {
+                        this.media = "all"; // Apply styles after loading
+                        checkAllStylesLoaded();
+                    };
+                    document.head.appendChild(link);
+                });
+
+                // Function to load scripts sequentially
+                function loadScriptsSequentially(scripts) {
+                    if (scripts.length === 0) {
+                        console.log("✅ All scripts loaded in order.");
+                        return;
+                    }
+
+                    let script = document.createElement("script");
+                    script.src = scripts.shift();
+                    script.onload = function () {
+                        console.log(`✅ Loaded: ${script.src}`);
+                        loadScriptsSequentially(scripts); // Load the next script
+                    };
+                    document.body.appendChild(script);
+                }
+            });
+        </script>
     </body>
 </html>
