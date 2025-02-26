@@ -7,8 +7,8 @@
     --base-color: #dd6531;
     --dark-gray: #292d36;
     --medium-gray: #808291;
-    --primary-font: 'Kumbh Sans', sans-serif;
-    --alt-font: 'Kumbh Sans', sans-serif;
+    --primary-font: Lexend, sans-serif;
+    --alt-font: Lexend, sans-serif;
 }
 /* reset */
 body {
