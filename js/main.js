@@ -2195,7 +2195,7 @@
      Window on load
      ====================================== */
 
-    $(window).on('load', function () {
+    (function initialLoad() {
 
         // Bootstrap tooltip
         var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
@@ -2232,7 +2232,7 @@
             fullScreenHeight();
             setTopSpaceHeight();
         }, headerTransition); // Header transition effect time
-    });
+    })();
 
     /* ===================================
      Page loader

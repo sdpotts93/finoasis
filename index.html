@@ -427,7 +427,6 @@
             }
             [class^=line-icon-], [class*=" line-icon-"] {
             font-family: "icomoon";
-            speak: none;
             font-style: normal;
             font-weight: normal;
             font-variant: normal;
@@ -453,7 +452,6 @@
             .feather {
             /* use !important to prevent issues with browser extensions that change fonts */
             font-family: "feather" !important;
-            speak: none;
             font-style: normal;
             font-weight: normal;
             font-variant: normal;
@@ -573,6 +571,11 @@
         </style>
     </head>
     <body data-mobile-nav-style="classic">
+        <script>
+            window.onbeforeunload = function () {
+                window.scrollTo(0, 0);
+            }
+        </script>
         <!-- <div class="loader">
             <span>
                 THIS IS THE MAIN THING
@@ -1275,6 +1278,7 @@
 <script defer src="js/main.js"></script> -->
         <script>
             window.addEventListener("load", function () {
+
                 console.log("✅ Page loaded, now loading stylesheets...");
 
                 let stylesheets = [
