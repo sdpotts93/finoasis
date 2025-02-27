@@ -103,3 +103,9 @@ footer .footer-logo img {
         display: none;
     }
 }
+
+.logo-small {
+    width: 80%;
+    height: auto;
+    margin-bottom: 10px;
+}

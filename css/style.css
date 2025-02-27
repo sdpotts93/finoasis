@@ -16594,7 +16594,7 @@ canvas {
 }
 
 .review-star-icon i {
-  color: #fd961e;
+  color: var(--yellow);
   letter-spacing: 1px;
 }
 
