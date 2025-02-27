@@ -109,3 +109,43 @@ footer .footer-logo img {
     height: auto;
     margin-bottom: 10px;
 }
+
+.logo-partner {
+    width: 100%;
+    height: auto;
+}
+
+.client-partner-pr {
+    padding-right: 15px;
+}
+
+.br-w {
+    border-right: 1px solid white;
+}
+
+.client-box-partner {
+    display: flex;
+    padding-left: 15px;
+}
+
+.opacity-extra-medium.bg-gradient-black-dark-orange { 
+    opacity: 0.8;
+}
+
+@media (max-width: 767px) {
+    .br-w {
+        border: none;
+        margin-bottom: 10px !important;
+    }
+    .logo-partner {
+        width: 68%;
+        margin-top: 30px;
+            
+    }
+    .client-box-partner svg {
+        width: 60%;
+    }
+    .opacity-extra-medium.bg-gradient-black-dark-orange {
+        opacity: 0.8;
+    }
+}
