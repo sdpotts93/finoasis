@@ -673,6 +673,8 @@
                 position: sticky;
                 top: 0;
                 z-index: 10;
+                background: rgba(255, 255, 255, 0.3);
+                backdrop-filter: blur(10px);
             }
 
 
@@ -1018,7 +1020,7 @@
             }
 
             @media (max-width: 991.98px) {
-                header.container nav a.btn {
+                header nav.container a.btn {
                     display: none;
                 } 
                 header .navigation {
@@ -1115,11 +1117,11 @@
         </style>
     </head>
     <body data-mobile-nav-style="classic">
-        <header class="container">
+        <header>
             <div class="top-header">
 
             </div>
-            <nav class="">
+            <nav class="container">
                 <div class="logo-container">
                     <svg width="4023" height="336" viewBox="0 0 4023 336" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="1713.5" cy="167.5" r="140.5" stroke="#292D36" stroke-width="54" />
@@ -1949,13 +1951,13 @@
                 </div>
                 <div class="row">
                     <div class="col-12 p-md-0">
-                        <ul class="blog-grid blog-wrapper grid-loading grid grid-3col xl-grid-3col lg-grid-3col md-grid-2col sm-grid-2col xs-grid-1col gutter-extra-large" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay":100, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                        <ul class="blog-grid blog-wrapper grid-loading grid grid-3col xl-grid-3col lg-grid-3col md-grid-2col sm-grid-2col xs-grid-1col gutter-extra-large" data-hide-mobile="true" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay":100, "staggervalue": 300, "easing": "easeOutQuad" }'>
                             <li class="grid-sizer"></li>
                             <!-- start blog item -->
                             <li class="grid-item">
                                 <div class="card border-0 border-radius-4px box-shadow-quadruple-large">
                                     <div class="blog-image">
-                                        <a href="demo-consulting-blog-single-modern.html" class="d-block"><img loading="lazy" src="/.netlify/images?url=/images/blog-1.jpg?fit=cover&w=600&h=460&fm=webp" alt="" /></a>
+                                        <a href="demo-consulting-blog-single-modern.html" class="d-block"><img src="/.netlify/images?url=/images/blog-1.jpg?fit=cover&w=600&h=460&fm=webp" alt="" /></a>
                                     </div>
                                     <div class="card-body p-13 md-p-11">
                                         <a href="demo-consulting-blog-single-modern.html" class="card-title mb-15px alt-font fw-600 fs-20 text-dark-gray d-inline-block">Cómo Diversificar tu Portafolio y Minimizar Riesgos</a>
@@ -1977,7 +1979,7 @@
                             <li class="grid-item">
                                 <div class="card border-0 border-radius-4px box-shadow-quadruple-large">
                                     <div class="blog-image">
-                                        <a href="demo-consulting-blog-single-modern.html" class="d-block"><img loading="lazy" src="/.netlify/images?url=/images/blog-2.jpg?fit=cover&w=600&h=460&fm=webp"
+                                        <a href="demo-consulting-blog-single-modern.html" class="d-block"><img src="/.netlify/images?url=/images/blog-2.jpg?fit=cover&w=600&h=460&fm=webp"
                                                 alt="" /></a>
                                     </div>
                                     <div class="card-body p-13 md-p-11">

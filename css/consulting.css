@@ -132,6 +132,16 @@ footer .footer-logo img {
     opacity: 0.8;
 }
 
+.footer-logo-custom {
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+footer a {
+    color: var(--medium-gray);
+}
+
 @media (max-width: 767px) {
     .br-w {
         border: none;
@@ -148,14 +158,8 @@ footer .footer-logo img {
     .opacity-extra-medium.bg-gradient-black-dark-orange {
         opacity: 0.8;
     }
-}
-
-.footer-logo-custom {
-    width: 100%;
-    height: auto;
-    margin-bottom: 30px;
-}
-
-footer a {
-    color: var(--medium-gray);
+    .footer-logo-custom {
+        width: 73%;
+        margin-bottom: 11px;
+    }
 }
