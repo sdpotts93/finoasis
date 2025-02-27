@@ -149,3 +149,13 @@ footer .footer-logo img {
         opacity: 0.8;
     }
 }
+
+.footer-logo-custom {
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+footer a {
+    color: var(--medium-gray);
+}
