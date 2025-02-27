@@ -2962,11 +2962,6 @@ textarea:focus {
   text-align: center;
 }
 
-.magic-cursor-light #ball-cursor,
-.scroll-progress .scroll-point,
-.theme-demos {
-  background-color: var(--white);
-}
 
 #ball-cursor:after,
 #ball-cursor:before {
@@ -3430,79 +3425,6 @@ textarea:focus {
   display: none;
 }
 
-.scroll-progress {
-  position: fixed;
-  right: 20px;
-  z-index: 111;
-  top: 50%;
-  -webkit-transition: all 0.3s linear;
-  transition: all 0.3s linear;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  mix-blend-mode: difference;
-}
-
-.scroll-progress.visible {
-  opacity: 1;
-  visibility: visible;
-}
-
-.scroll-progress .scroll-top {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.scroll-progress .scroll-line {
-  width: 2px;
-  height: 60px;
-  position: relative;
-  background-color: rgba(255, 255, 255, 0.15);
-  color: inherit;
-  display: block;
-}
-
-.scroll-progress .scroll-point {
-  display: inline-block;
-  width: 2px;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.scroll-progress .scroll-text {
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
-  writing-mode: vertical-lr;
-  margin-bottom: 15px;
-  color: var(--white);
-  font-size: 11px;
-  text-transform: uppercase;
-}
-
-.scroll-progress.scroll-simple {
-  position: fixed;
-  right: 50px;
-  z-index: 111;
-  top: auto;
-  transform: none;
-  bottom: 50px;
-  mix-blend-mode: inherit;
-}
-
-.scroll-progress.scroll-simple .scroll-top {
-  background: var(--white);
-  font-size: 17px;
-  line-height: 34px;
-  box-shadow: 0 0 25px rgba(23, 23, 23, 0.25);
-  height: 34px;
-  width: 34px;
-  padding: 0;
-  border-radius: 100%;
-}
 
 .theme-demos {
   display: none;
@@ -14439,6 +14361,22 @@ blockquote footer {
 .feature-box.feature-box-left-icon .feature-box-icon,
 .feature-box.feature-box-left-icon-middle .feature-box-icon {
   margin-right: 30px;
+}
+
+.feature-box-icon svg {
+  width: 70px;
+  height: 70px;
+}
+
+@media screen and (max-width: 767px) {
+  .feature-box-icon svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+.feature-box-icon svg path {
+  transform: scale(1.4);
+  transform-origin: center;
 }
 
 .feature-box.feature-box-left-icon .feature-box-content,
