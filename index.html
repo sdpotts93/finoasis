@@ -33,7 +33,7 @@
                 --header-height: 100px;
                 --base-color: #6064D3;
                 --dark-gray: #292d36;
-                --medium-gray: #63646b;
+                --medium-gray: #545458;
                 --primary-font: Lexend, sans-serif;
                 --alt-font: Lexend, sans-serif;
                 --orange: #FF6F00;
@@ -41,6 +41,11 @@
                 --white: #ffffff;
             }
 
+            @media (max-width: 767.98px) {
+                :root {
+                    --header-height: 60px;
+                }
+            }
             @font-face {
                 font-family: "Lexend";
                 src: url("fonts/lexend.woff2") format("woff2");
@@ -815,8 +820,8 @@
                 align-items: center;
                 justify-content: center;
                 position: absolute;
-                height: 600px;
-                width: 600px;
+                height: 400px;
+                width: 400px;
                 right: 0;
                 top: -60px;
                 z-index: -1;
@@ -919,6 +924,52 @@
                 display: inline-block;
             }
 
+            @media (max-width: 991.98px) {
+                header.container nav a.btn {
+                    display: none;
+                } 
+                header .navigation {
+                    display: none;
+                }
+            }
+
+            @media (max-width: 767.98px) {
+
+                .logo-container svg {
+                    height: auto;
+                    width: 60%;
+                }
+                section.hero-section {
+                    padding-top: calc(var(--header-height) + 40px);
+                    overflow: hidden;
+                    height: auto;
+                    padding-bottom: 265px;
+                    overflow-y: visible;
+                    overflow-x: hidden;
+                }
+                h1 {
+                    max-width: 97%;
+                    margin-bottom: 25px;
+                }
+                section.hero-section .container p {
+                    width: 70vw; 
+                }
+                .svg-container {
+                    height: 200px;
+                    width: 200px;
+                    bottom: -250px;
+                    top: unset;
+                    right: unset;
+                    left: 0;
+                }
+                
+                .btn.btn-large, .btn.btn-rounded.btn-extra-large {
+                    padding: 16px 36px;
+                }
+                .btn.btn-large {
+                    font-size: 13px;
+                }
+            }
         </style>
     </head>
     <body data-mobile-nav-style="classic">
@@ -1655,7 +1706,7 @@
         </section>
         <!-- end section -->
         <!-- start section -->
-        <section class="bg-very-light-gray"> 
+        <section class="bg-very-light-gray overflow-hidden"> 
             <div class="container">
                 <div class="row justify-content-center mb-2">
                     <div class="col-lg-7 text-center" data-anime='{ "opacity": [0,1], "duration": 800, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
