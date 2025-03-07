@@ -761,3 +761,18 @@ readers do not read off random characters that represent icons */
 .bi-wallet2::before {
     content: "\f615";
 }
+
+.col-gap-30 {
+    column-gap: 30px;
+}
+@media (max-width: 1199px) and (min-width: 992px) {
+    .col-gap-30.row-cols-lg-3 > * {
+        width: 40%;
+    }
+}
+
+@media (max-width: 991px) {
+    .col-gap-30 {
+        row-gap: 30px;
+    }
+}
