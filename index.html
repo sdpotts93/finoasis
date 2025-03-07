@@ -1188,6 +1188,71 @@
                 line-height: 1.4;
             }
         </style>
+        <script>
+            window.addEventListener("DOMContentLoaded", function () {
+
+                    console.log("✅ Page loaded, now loading stylesheets...");
+
+                    let stylesheets = [
+                        "css/vendors.css",
+                        "css/style.css",
+                        "css/responsive.min.css",
+                        "css/consulting.css"
+                    ];
+
+                    let loadedCount = 0;
+
+                    function checkAllStylesLoaded() {
+                        loadedCount++;
+                        if (loadedCount === stylesheets.length) {
+                            console.log("✅ All stylesheets loaded, now loading scripts in order...");
+                            loadScriptsSequentially([
+                                "js/jquery.js",
+                                "js/vendors.min.js",
+                                "js/main.js"
+                            ]);
+                        }
+                    }
+
+                    // Load styles asynchronously
+                    stylesheets.forEach(function (href) {
+                        var link = document.createElement("link");
+                        link.rel = "stylesheet";
+                        link.href = href;
+                        link.onload = checkAllStylesLoaded;
+                        document.head.appendChild(link);
+                    });
+
+                    function showContent() {
+                        let elements = document.querySelectorAll("body");
+                        elements.forEach(item => {
+                            item.classList.add("loaded");
+                        })
+                        let hiddenInitial = document.querySelector(".initial-hidden");
+                        hiddenInitial.classList.add("visible");
+                        requestAnimationFrame(() => {
+                            hiddenInitial.classList.add("animate")
+                        });
+
+                    }
+                    // Function to load scripts sequentially
+                    function loadScriptsSequentially(scripts) {
+                        if (scripts.length === 0) {
+                            console.log("✅ All scripts loaded in order.");
+                            showContent();
+                            return;
+                        }
+
+                        let script = document.createElement("script");
+                        script.src = scripts.shift();
+                        script.onload = function () {
+                            console.log(`✅ Loaded: ${script.src}`);
+                            loadScriptsSequentially(scripts); // Load the next script
+                        };
+                        document.body.appendChild(script);
+                    }
+                });
+        </script>
     </head>
     <body data-mobile-nav-style="classic">
         <header>
@@ -2127,69 +2192,6 @@
                 window.scrollTo(0, 0);
             }
 
-            window.addEventListener("load", function () {
-
-                console.log("✅ Page loaded, now loading stylesheets...");
-
-                let stylesheets = [
-                    "css/vendors.css",
-                    "css/style.css",
-                    "css/responsive.min.css",
-                    "css/consulting.css"
-                ];
-
-                let loadedCount = 0;
-
-                function checkAllStylesLoaded() {
-                    loadedCount++;
-                    if (loadedCount === stylesheets.length) {
-                        console.log("✅ All stylesheets loaded, now loading scripts in order...");
-                        loadScriptsSequentially([
-                            "js/jquery.js",
-                            "js/vendors.min.js",
-                            "js/main.js"
-                        ]);
-                    }
-                }
-
-                // Load styles asynchronously
-                stylesheets.forEach(function (href) {
-                    var link = document.createElement("link");
-                    link.rel = "stylesheet";
-                    link.href = href;
-                    link.onload = checkAllStylesLoaded;
-                    document.head.appendChild(link);
-                });
-
-                function showContent() {
-                    let elements = document.querySelectorAll("body");
-                    elements.forEach(item => {
-                        item.classList.add("loaded");
-                    })
-                    let hiddenInitial = document.querySelector(".initial-hidden");
-                    hiddenInitial.classList.add("visible");
-                    requestAnimationFrame(() => {
-                        hiddenInitial.classList.add("animate")
-                    });
-                    
-                }
-                // Function to load scripts sequentially
-                function loadScriptsSequentially(scripts) {
-                    if (scripts.length === 0) {
-                        console.log("✅ All scripts loaded in order.");
-                        showContent();
-                        return;
-                    }
-
-                    let script = document.createElement("script");
-                    script.src = scripts.shift();
-                    script.onload = function () {
-                        console.log(`✅ Loaded: ${script.src}`);
-                        loadScriptsSequentially(scripts); // Load the next script
-                    };
-                    document.body.appendChild(script);
-                }
-            });
         </script>
     </body>
 </html>
