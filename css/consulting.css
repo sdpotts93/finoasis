@@ -159,4 +159,7 @@ footer a {
         width: 73%;
         margin-bottom: 11px;
     }
+    .services-mobile {
+        display: flex;
+    }
 }

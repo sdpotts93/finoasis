@@ -806,7 +806,7 @@
    
             h1 {
                 margin: 0;
-                font-size: clamp(45px, calc(6.5vw + 2.5vh + 1vmin), 100px);
+                font-size: clamp(45px, calc(2.5vw + 2.5vh + 0.5vmin), 100px);
                 line-height: 1.2;
                 color: var(--dark-gray);
                 max-width: 70%;
@@ -1050,6 +1050,14 @@
 
             @media (max-width: 767.98px) {
 
+                .services-mobile {
+                    display: none;
+                }
+                
+                h1 {
+                    font-size: clamp(45px, calc(6.5vw + 2.5vh + 1vmin), 100px);
+                }
+
                 html {
                     font-size: 12px;
                 }
@@ -1115,7 +1123,7 @@
                     padding-bottom: 265px;
                     height: fit-content;
                     min-height: 77vh;
-                    padding-bottom: 265px;
+                    padding-bottom: 275px;
                 }
                 h1 {
                     max-width: 97%;
@@ -1125,12 +1133,12 @@
                     width: 70vw; 
                 }
                 .svg-container {
-                    height: 180px;
-                    width: 180px;
-                    bottom: -250px;
+                    height: 230px;
+                    width: 230px;
+                    bottom: -270px;
                     top: unset;
                     right: unset;
-                    left: 40px;
+                    left: 20px;
                 }
                 
                 .btn.btn-large, .btn.btn-rounded.btn-extra-large {
@@ -1391,7 +1399,7 @@
                 </div>
                 <div class="row row-cols-1 row-cols-xl-4 row-cols-md-2 row-cols-sm-2 justify-content-center" data-hide-mobile="true" data-anime='{ "el": "childs", "translateX": [30, 0], "opacity": [0,1], "duration": 800, "delay": 200, "staggervalue": 300, "easing": "easeOutQuad" }'>
                     <!-- start interactive banner item -->
-                    <div class="col interactive-banner-style-05 lg-mb-30px position-relative z-index-1 w-95">
+                    <div class="col interactive-banner-style-05 lg-mb-30px position-relative z-index-1 services-mobile">
                         <div class="atropos" data-atropos data-atropos-perspective="1450">
                             <a href="demo-consulting-services-details.html" aria-label="Visit Consulting Services Page" class="position-absolute z-index-1 top-0px left-0px h-100 w-100"></a>
                             <div class="atropos-scale">
@@ -1414,7 +1422,7 @@
                     </div>
                     <!-- end interactive banner item --> 
                     <!-- start interactive banner item -->
-                    <div class="col interactive-banner-style-05 lg-mb-30px position-relative z-index-1 w-95">
+                    <div class="col interactive-banner-style-05 lg-mb-30px position-relative z-index-1 services-mobile">
                         <div class="atropos" data-atropos data-atropos-perspective="1450">
                             <a href="demo-consulting-services-details.html" aria-label="Visit Consulting Services Page" class="position-absolute z-index-1 top-0px left-0px h-100 w-100"></a>
                             <div class="atropos-scale">
@@ -1437,7 +1445,7 @@
                     </div> 
                     <!-- end interactive banner item --> 
                     <!-- start interactive banner item -->
-                    <div class="col interactive-banner-style-05 sm-mb-30px position-relative z-index-1 w-95">
+                    <div class="col interactive-banner-style-05 sm-mb-30px position-relative z-index-1 services-mobile">
                         <div class="atropos" data-atropos data-atropos-perspective="1450">
                             <a href="demo-consulting-services-details.html" aria-label="Visit Consulting Services Page" class="position-absolute z-index-1 top-0px left-0px h-100 w-100"></a>
                             <div class="atropos-scale">
@@ -1460,7 +1468,7 @@
                     </div>
                     <!-- end interactive banner item --> 
                     <!-- start interactive banner item -->
-                    <div class="col interactive-banner-style-05 position-relative z-index-1 w-95">
+                    <div class="col interactive-banner-style-05 position-relative z-index-1 services-mobile">
                         <div class="atropos" data-atropos data-atropos-perspective="1450">
                             <a href="demo-consulting-services-details.html" aria-label="Visit Consulting Services Page" class="position-absolute z-index-1 top-0px left-0px h-100 w-100"></a>
                             <div class="atropos-scale">
@@ -2086,9 +2094,18 @@
         <script>
             
             setTimeout(() => {
-                let svgContainer = document.querySelector(".svg-container");
+                var isMobile = false,
+                isiPhoneiPad = false,
+                isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
-                svgContainer.classList.add('float');
+                if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                    isMobile = true;
+                }
+
+                if (!isMobile) {
+                    let svgContainer = document.querySelector(".svg-container");
+                    svgContainer.classList.add('float');
+                }
             }, 1000)
 
             window.onbeforeunload = function () {
