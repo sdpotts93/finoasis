@@ -25,7 +25,6 @@ a:hover {
 }
 
 :root {
-  --alt-font: "Plus Jakarta Sans", sans-serif;
   --base-color: #2946f3;
   --white: #ffffff;
   --black: #000000;
@@ -34,7 +33,6 @@ a:hover {
   --crusoe-green: #d39121;
   --yellow: #ffea23;
   --dark-gray: #232323;
-  --medium-gray: #717580;
   --extra-medium-gray: #e4e4e4;
   --light-gray: #a8a8a8;
   --very-light-gray: #f7f7f7;
@@ -12953,7 +12951,7 @@ blockquote footer {
 
 .btn.btn-box-shadow.btn-dark-gray:active,
 .btn.btn-box-shadow.btn-dark-gray:hover {
-  background: #ff6f0030;
+  background: #DD7B5530;
   color: var(--dark-gray);
 }
 
