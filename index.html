@@ -524,6 +524,12 @@
             .mobile-menu-icon {
                 display: none;
             }
+            @media (max-width: 1024px) {
+                section.hero-section {
+                    padding-top: calc((var(--header-height) * 2) + 40px);
+                    height: fit-content;
+                }
+            }
 
             @media (max-width: 991.98px) {
                 header nav.container a.btn {
@@ -535,22 +541,6 @@
 
                 html {
                     font-size: 14px;
-                }
-
-            }
-
-            @media (max-width: 767.98px) {
-
-                .services-mobile {
-                    display: none;
-                }
-                
-                h1 {
-                    font-size: clamp(45px, calc(6.5vw + 2.5vh + 1vmin), 100px);
-                }
-
-                html {
-                    font-size: 12px;
                 }
 
                 .mobile-menu-icon {
@@ -604,18 +594,46 @@
                     width: 14px;
                     left: -8px;
                 }
-
+                
+                header {
+                    position: fixed;
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                }
+                
                 .logo-container svg {
                     height: auto;
                     width: 60%;
                 }
+
+            }
+
+            @media (max-width: 767.98px) {
+
+                .mobile-menu-icon {
+                    margin-left: auto;
+                }
+
+                .logo-container svg {
+                    width: 200px;
+                }
                 section.hero-section {
-                    padding-top: calc(var(--header-height) + 40px);
-                    padding-bottom: 265px;
-                    height: fit-content;
-                    min-height: 77vh;
                     padding-bottom: 275px;
                 }
+                .services-mobile {
+                    display: none;
+                }
+                
+                h1 {
+                    font-size: clamp(45px, calc(6.5vw + 2.5vh + 1vmin), 100px);
+                }
+
+                html {
+                    font-size: 12px;
+                }
+
+
                 h1 {
                     max-width: 100%;
                     margin-bottom: 25px;
