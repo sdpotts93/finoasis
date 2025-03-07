@@ -12500,14 +12500,14 @@ blockquote footer {
 }
 
 .btn.btn-dark-gray {
-  background-color: var(--orange);
+  background-color: var(--purple);
   color: var(--white);
 }
 
 .btn.btn-dark-gray:active,
 .btn.btn-dark-gray:hover {
   background-color: transparent;
-  border-color: var(--orange);
+  border-color: var(--purple);
   color: var(--dark-gray);
 }
 
@@ -12950,7 +12950,7 @@ blockquote footer {
 
 .btn.btn-box-shadow.btn-dark-gray:active,
 .btn.btn-box-shadow.btn-dark-gray:hover {
-  background: #DD7B5530;
+  background: #79578d30;
   color: var(--dark-gray);
 }
 
