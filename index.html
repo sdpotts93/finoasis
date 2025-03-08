@@ -193,7 +193,6 @@
                 display: flex;
                 align-items: flex-start;
                 width: 100%;
-                background-color: white;
                 z-index: 1;
                 padding-top: calc(var(--header-height) + 20vh);
                 padding-bottom: 0px;
@@ -555,6 +554,7 @@
                     -webkit-box-align: center;
                     -ms-flex-align: center;
                     align-items: center;
+                    z-index: 2;
                 }
                 .mobile-menu-lines {
                     position: relative;
@@ -696,6 +696,70 @@
             .services-mobile figcaption p {
                 line-height: 1.4;
             }
+            .bg-gradient-light-blue {
+                background-image:linear-gradient(rgb(245, 245, 245), rgb(245, 245, 245), rgb(245, 245, 245), rgb(255, 255, 255), rgb(255, 255, 255))
+            }
+            .mobile-menu {
+                position: fixed;
+                top: 0;
+                height: 100vh;
+                width: 100vw;
+                left: 0;
+                background-color: var(--dark-gray);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transform: translateX(100%);
+                transition: transform 0.5s cubic-bezier(0.8, 0.5, 0.1, 1);
+            }
+            nav.container.open .mobile-menu {
+                transform: translateX(0);
+
+            }
+
+            nav.container.open .mobile-menu-lines span {
+                background-color: white;
+            }
+
+            .letter {
+                transition: all 0.4s ease;
+            }
+
+            nav.container.open .logo-container svg .letter {
+                fill: #ffffff;
+                stroke: #ffffff;
+            }
+
+            .logo-container {
+                z-index: 1;
+            }
+
+
+            nav.container.open .mobile-menu {
+                transform: translateX(0);
+            }
+
+            nav.container.open .mobile-menu-lines span:nth-child(3) {
+                width: 0%;
+            }
+            nav.container.open .mobile-menu-lines span:nth-child(1) {
+                transform: rotate(45deg);
+                top: 5px;
+            }
+
+            nav.container.open .mobile-menu-lines span:nth-child(2) {
+                transform: rotate(-45deg);
+            }
+
+            .mobile-menu ul li a {
+                color: white;
+            }
+            .mobile-menu ul li {
+                margin-bottom: 35px;
+            }
+            .mobile-menu {
+                font-size: 3rem;
+            }
         </style>
         <script>
             window.addEventListener("DOMContentLoaded", function () {
@@ -769,9 +833,33 @@
 
             </div>
             <nav class="container">
+                <div class="mobile-menu">
+                    <ul class="mobile-navigation">
+                        <li>
+                            <a href="/">
+                                Inicio
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/">
+                                Servicios
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/">
+                                Equipo
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/">
+                                Contacto
+                            </a>
+                        </li>
+                    </ul>
+                </div>
                 <div class="logo-container">
                     <svg width="4023" height="336" viewBox="0 0 4023 336" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="1713.5" cy="167.5" r="140.5" stroke="#292D36" stroke-width="54" />
+                        <circle class="letter" cx="1713.5" cy="167.5" r="140.5" stroke="#292D36" stroke-width="54" />
                         <path
                             d="M1835 168C1835 234.826 1780.83 289 1714 289C1647.17 289 1593 234.826 1593 168C1593 101.174 1647.17 47 1714 47C1780.83 47 1835 101.174 1835 168Z"
                             fill="#9CB38B" />
@@ -824,20 +912,24 @@
                             d="M1720.14 171.04C1720.08 174.522 1719.18 175.517 1715.57 175.454C1711.96 175.391 1711.1 174.253 1711.16 170.883C1711.23 166.953 1712.36 166.411 1715.73 166.469C1719.41 166.534 1720.21 167.109 1720.14 171.04Z"
                             fill="#79578D" />
                         <path
+                            class="letter"
                             d="M4022.49 240.085C4022.49 259.736 4016.1 276.736 4003.31 291.084C3990.52 305.432 3972.27 316.505 3948.57 324.303C3925.17 332.101 3897.57 336 3865.75 336C3813.66 336 3774.05 326.642 3746.91 307.927C3720.09 289.212 3706.68 263.947 3706.68 232.131V230.26H3763.76V231.196C3763.76 250.223 3772.49 264.727 3789.96 274.708C3807.74 284.378 3833 289.212 3865.75 289.212C3895.7 289.212 3918.94 285.157 3935.47 277.047C3952 268.626 3960.27 256.617 3960.27 241.021V240.553C3960.27 228.7 3955.74 219.499 3946.7 212.948C3937.96 206.398 3926.89 201.719 3913.48 198.912C3900.38 196.105 3881.97 193.297 3858.27 190.49C3827.39 186.747 3802.12 182.536 3782.47 177.858C3763.13 172.867 3746.45 163.821 3732.41 150.721C3718.68 137.62 3711.82 118.905 3711.82 94.5754V94.1075C3711.82 64.7872 3725.55 42.0172 3753 25.7975C3780.44 9.26583 3817.56 1 3864.35 1C3913.32 1 3951.38 9.42178 3978.51 26.2653C4005.65 43.1089 4019.22 66.5028 4019.22 96.4469V98.7863H3961.67V97.8505C3961.67 81.6308 3953.09 69.1541 3935.94 60.4204C3918.78 51.6867 3895.39 47.3198 3865.75 47.3198C3836.43 47.3198 3813.66 51.5307 3797.44 59.9525C3781.54 68.0624 3773.58 79.4474 3773.58 94.1075V94.5754C3773.58 106.74 3778.11 116.254 3787.15 123.116C3796.2 129.666 3807.43 134.501 3820.84 137.62C3834.56 140.427 3853.28 143.235 3876.98 146.042C3907.86 149.785 3932.97 154.152 3952.31 159.142C3971.65 163.821 3988.18 172.555 4001.91 185.344C4015.63 197.82 4022.49 215.912 4022.49 239.617V240.085Z"
                             fill="#292D36" />
-                        <path d="M3414.81 332.135H3353.98V4.62109H3414.81V332.135Z" fill="#292D36" />
+                        <path class="letter" d="M3414.81 332.135H3353.98V4.62109H3414.81V332.135Z" fill="#292D36" />
                         <path
+                            class="letter"
                             d="M3061.81 240.085C3061.81 259.736 3055.42 276.736 3042.63 291.084C3029.84 305.432 3011.59 316.505 2987.89 324.303C2964.49 332.101 2936.89 336 2905.07 336C2852.98 336 2813.37 326.642 2786.23 307.927C2759.41 289.212 2745.99 263.947 2745.99 232.131V230.26H2803.08V231.196C2803.08 250.223 2811.81 264.727 2829.28 274.708C2847.06 284.378 2872.32 289.212 2905.07 289.212C2935.02 289.212 2958.25 285.157 2974.79 277.047C2991.32 268.626 2999.58 256.617 2999.58 241.021V240.553C2999.58 228.7 2995.06 219.499 2986.02 212.948C2977.28 206.398 2966.21 201.719 2952.8 198.912C2939.7 196.105 2921.29 193.297 2897.59 190.49C2866.71 186.747 2841.44 182.536 2821.79 177.858C2802.45 172.867 2785.76 163.821 2771.73 150.721C2758 137.62 2751.14 118.905 2751.14 94.5754V94.1075C2751.14 64.7872 2764.87 42.0172 2792.31 25.7975C2819.76 9.26583 2856.88 1 2903.67 1C2952.64 1 2990.69 9.42178 3017.83 26.2653C3044.97 43.1089 3058.54 66.5028 3058.54 96.4469V98.7863H3000.99V97.8505C3000.99 81.6308 2992.41 69.1541 2975.25 60.4204C2958.1 51.6867 2934.7 47.3198 2905.07 47.3198C2875.75 47.3198 2852.98 51.5307 2836.76 59.9525C2820.85 68.0624 2812.9 79.4474 2812.9 94.1075V94.5754C2812.9 106.74 2817.42 116.254 2826.47 123.116C2835.51 129.666 2846.74 134.501 2860.16 137.62C2873.88 140.427 2892.6 143.235 2916.3 146.042C2947.18 149.785 2972.29 154.152 2991.63 159.142C3010.97 163.821 3027.5 172.555 3041.22 185.344C3054.95 197.82 3061.81 215.912 3061.81 239.617V240.085Z"
                             fill="#292D36" />
                         <path
+                            class="letter"
                             d="M2401.02 268.997H2228.38L2202.18 332.161H2139.01L2278.91 3.71094H2350.49L2490.39 332.161H2427.69L2401.02 268.997ZM2382.31 223.613L2314.93 63.5992L2247.56 223.613H2382.31Z"
                             fill="#292D36" />
                         <path
+                            class="letter"
                             d="M1247.27 4.62109V332.135H1182.24L990.876 80.4172L991.344 332.135H930.52V4.62109H996.49L1186.92 254.467L1185.98 4.62109H1247.27Z"
                             fill="#292D36" />
-                        <path d="M622.288 332.135H561.464V4.62109H622.288V332.135Z" fill="#292D36" />
-                        <path d="M60.824 53.7482V147.791H252.186V195.047H60.824V332.135H0V4.62109H272.304V53.7482H60.824Z" fill="#292D36" />
+                        <path class="letter" d="M622.288 332.135H561.464V4.62109H622.288V332.135Z" fill="#292D36" />
+                        <path class="letter" d="M60.824 53.7482V147.791H252.186V195.047H60.824V332.135H0V4.62109H272.304V53.7482H60.824Z" fill="#292D36" />
                     </svg>
 
 
@@ -897,7 +989,8 @@
                     </span>
                 </h1>
                 <p>
-                    Wealth planning de clase mundial, diseñado para tu tranquilidad financiera.
+                    Wealth planning de clase mundial, con la seguridad de la institución financiera que elijas, para asegurar tu prosperidad
+                    hoy y en el futuro.
                 </p>
                 <a href="/contact" class="btn btn-base-color btn-box-shadow btn-large btn-round-edge">
                     Empieza a crecer tu patrimonio
@@ -1018,7 +1111,7 @@
         </section>
         <!-- end section -->
         <!-- start section -->
-        <section class="bg-gradient-very-light-gray ps-7 pe-7 xxl-ps-3 xxl-pe-3 xs-px-0">
+        <section class="bg-gradient-light-blue ps-7 pe-7 xxl-ps-3 xxl-pe-3 xs-px-0">
             <div class="container-fluid"> 
                 <div class="row justify-content-center mb-3">
                     <div class="col-xl-5 col-lg-7 col-md-8 text-center" data-anime='{ "opacity": [0,1], "duration": 800, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
@@ -1387,7 +1480,7 @@
                                 <a href="/" aria-label="Visit Finoasis Homepage">
                                     <svg class="logo-partner" width="4023" height="336" viewBox="0 0 4023 336" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="1713.5" cy="167.5" r="140.5" stroke="#292D36" stroke-width="54" />
+                                        <circle cx="1713.5" cy="167.5" r="140.5" stroke="#FFFFFF" stroke-width="54" />
                                         <path
                                             d="M1835 168C1835 234.826 1780.83 289 1714 289C1647.17 289 1593 234.826 1593 168C1593 101.174 1647.17 47 1714 47C1780.83 47 1835 101.174 1835 168Z"
                                             fill="#9CB38B" />
@@ -1538,13 +1631,14 @@
                     <!-- end team member item -->
                     <!-- start team member item -->
                     <div class="col team-style-05">
+
                         <p>
-                            Con más de 14 años en el sector financiero, es especialista en asesoría patrimonial e inversiones estratégicas. Es
-                            mentor en Collective Academy y ha diseñado estrategias para inversionistas de alto patrimonio.
+                            Con más de 15 años en el sector financiero, es especialista en asesoría patrimonial e inversiones estratégicas. Es
+                            mentor en Collective Academy y se ha enfocado en diseñar estrategias para inversionistas de alto patrimonio.
                         </p>
                         <p>
-                            Cuenta con un MBA por el IPADE y una licenciatura en Administración y Finanzas por la Universidad Panamericana, donde
-                            recibió el Premio de uno de los 100 mejores universitarios del DF.
+                            Cuenta con un MBA por el IPADE y una licenciatura en Administración y Finanzas por la Universidad Panamericana. 
+                            Además tiene certificaciones avalados por la AMIB en México y por FINRA en USA para el manejo de inversiones.
                         </p>
                         <a href="#" class="btn btn-small btn-dark-gray btn-box-shadow btn-round-edge border-1 w-100 mt-30px">Habla conmigo</a>
                     </div>
@@ -1563,7 +1657,7 @@
         </section>
         <!-- end section -->
         <!-- start section -->
-        <section class="bg-very-light-gray overflow-hidden"> 
+        <section class="bg-gradient-light-blue overflow-hidden"> 
             <div class="container">
                 <div class="row justify-content-center mb-2">
                     <div class="col-lg-7 text-center" data-anime='{ "opacity": [0,1], "duration": 800, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
@@ -1824,6 +1918,12 @@
 <script defer src="js/main.js"></script> -->
         <script>
             
+            const mobileMenuIcon = document.querySelector(".mobile-menu-icon");
+            mobileMenuIcon.addEventListener("click", () => {
+                const navContainer = document.querySelector("nav.container");
+                navContainer.classList.toggle("open");
+            });
+
             setTimeout(() => {
                 var isMobile = false,
                 isiPhoneiPad = false,
