@@ -155,8 +155,13 @@
             *, ::after, ::before {
                 box-sizing: border-box;
             }
+            /* html {
+               overflow: hidden;
+            }
+            html.loaded {
+                overflow: auto;
+            } */
             body {
-                overflow: hidden;
                 font-size: 17px;
                 line-height: 30px;
                 margin: 0;
@@ -873,10 +878,9 @@
                     });
 
                     function showContent() {
-                        let elements = document.querySelectorAll("body");
-                        elements.forEach(item => {
-                            item.classList.add("loaded");
-                        })
+                        let html = document.documentElement;
+                        html.classList.add('loaded');
+
                         let hiddenInitial = document.querySelector(".initial-hidden");
                         hiddenInitial.classList.add("visible");
                         requestAnimationFrame(() => {
