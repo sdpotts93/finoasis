@@ -159,6 +159,7 @@ footer a {
     .footer-logo-custom {
         width: 73%;
         margin-bottom: 11px;
+        margin-top: 10px;
     }
     .services-mobile {
         display: flex;
