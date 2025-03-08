@@ -542,6 +542,12 @@
             .mobile-menu-icon {
                 display: none;
             }
+            @media (max-width:1200px) {
+                .logo-container svg {
+                    width: 200px;
+                }
+
+            }
             @media (max-width: 1024px) {
                 section.hero-section {
                     padding-top: calc((var(--header-height) * 2) + 40px);
@@ -949,17 +955,22 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/">
+                            <a href="/servicios">
                                 Servicios
                             </a>
                         </li>
                         <li>
-                            <a href="/">
+                            <a href="/equipo">
                                 Equipo
                             </a>
                         </li>
                         <li>
-                            <a href="/">
+                            <a href="/blog">
+                                Blog
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/contacto">
                                 Contacto
                             </a>
                         </li>
@@ -1051,13 +1062,18 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/">
+                        <a href="/servicios">
                             Servicios
                         </a>
                     </li>
                     <li>
-                        <a href="/">
+                        <a href="/equipo">
                             Equipo
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/blog">
+                            Blog
                         </a>
                     </li>
                     <li>
@@ -1199,8 +1215,8 @@
                         <h2 class="alt-font fw-600 text-dark-gray ls-minus-2px mb-25px">Tu patrimonio, en tus manos</h2>
                         <p class="w-80 lg-w-100 mb-35px sm-mb-25px">Somos una consultora patrimonial que te da el control absoluto sobre tus inversiones. Con asesoría independiente, estrategias a la medida y acceso a instituciones de prestigio, puedes crecer tu patrimonio con transparencia y sin conflictos de interés.</p> 
                         <div class="d-inline-block">
-                            <a href="demo-consulting-company.html" class="btn btn-medium btn-dark-gray btn-box-shadow me-25px btn-round-edge">Acerca de</a>
-                            <a href="demo-consulting-process.html" class="btn btn-link btn-large text-dark-gray xs-mt-15px xs-mb-15px">¿Qué ofrecemos?</a>
+                            <a href="/equipo" class="btn btn-medium btn-dark-gray btn-box-shadow me-25px btn-round-edge">Acerca de</a>
+                            <a href="/servicios" class="btn btn-link btn-large text-dark-gray xs-mt-15px xs-mb-15px">¿Qué ofrecemos?</a>
                         </div>
                         <div class="row align-items-center mt-50px sm-mt-40px">
                             <div class="col-auto col-lg-4 border-end border-color-extra-medium-gray text-center"><h2 class="text-dark-gray fw-700 mb-0">5.0</h2></div>
@@ -1229,7 +1245,7 @@
                     <!-- start interactive banner item -->
                     <div class="col interactive-banner-style-05 lg-mb-30px position-relative z-index-1 services-mobile">
                         <div class="atropos" data-atropos data-atropos-perspective="1450">
-                            <a href="demo-consulting-services-details.html" aria-label="Visit Consulting Services Page" class="position-absolute z-index-1 top-0px left-0px h-100 w-100"></a>
+                            <a href="/servicios/gestion-de-inversiones" aria-label="Visitar Servicios de Gestión de Inversión" class="position-absolute z-index-1 top-0px left-0px h-100 w-100"></a>
                             <div class="atropos-scale">
                                 <div class="atropos-rotate">
                                     <div class="atropos-inner">
@@ -1252,7 +1268,7 @@
                     <!-- start interactive banner item -->
                     <div class="col interactive-banner-style-05 lg-mb-30px position-relative z-index-1 services-mobile">
                         <div class="atropos" data-atropos data-atropos-perspective="1450">
-                            <a href="demo-consulting-services-details.html" aria-label="Visit Consulting Services Page" class="position-absolute z-index-1 top-0px left-0px h-100 w-100"></a>
+                            <a href="/servicios/coaching-financiero" aria-label="Visit Consulting Services Page" class="position-absolute z-index-1 top-0px left-0px h-100 w-100"></a>
                             <div class="atropos-scale">
                                 <div class="atropos-rotate">
                                     <div class="atropos-inner">
@@ -1275,7 +1291,7 @@
                     <!-- start interactive banner item -->
                     <div class="col interactive-banner-style-05 sm-mb-30px position-relative z-index-1 services-mobile">
                         <div class="atropos" data-atropos data-atropos-perspective="1450">
-                            <a href="demo-consulting-services-details.html" aria-label="Visit Consulting Services Page" class="position-absolute z-index-1 top-0px left-0px h-100 w-100"></a>
+                            <a href="/servicios/ahorro-para-la-educacion" aria-label="Visit Consulting Services Page" class="position-absolute z-index-1 top-0px left-0px h-100 w-100"></a>
                             <div class="atropos-scale">
                                 <div class="atropos-rotate">
                                     <div class="atropos-inner">
@@ -1298,7 +1314,7 @@
                     <!-- start interactive banner item -->
                     <div class="col interactive-banner-style-05 position-relative z-index-1 services-mobile">
                         <div class="atropos" data-atropos data-atropos-perspective="1450">
-                            <a href="demo-consulting-services-details.html" aria-label="Visit Consulting Services Page" class="position-absolute z-index-1 top-0px left-0px h-100 w-100"></a>
+                            <a href="/servicios/inversiones-extranjeras" aria-label="Visit Consulting Services Page" class="position-absolute z-index-1 top-0px left-0px h-100 w-100"></a>
                             <div class="atropos-scale">
                                 <div class="atropos-rotate">
                                     <div class="atropos-inner">
@@ -1331,7 +1347,7 @@
                         <h2 class="alt-font fw-600 text-dark-gray ls-minus-2px">Ventajas de Invertir con FinOasis</h2>
                         <p class="w-80 lg-w-100 mb-30px sm-mb-25px">Asesoría independiente, acceso a inversiones globales y estrategias a la medida, sin comisiones ocultas. Invierte con
                         transparencia, seguridad y optimización fiscal, mientras tu patrimonio crece con solidez.</p> 
-                        <a href="#" class="btn btn-small btn-dark-gray btn-box-shadow btn-round-edge">Todos los Servicios</a>
+                        <a href="/servicios" class="btn btn-small btn-dark-gray btn-box-shadow btn-round-edge">Todos los Servicios</a>
                     </div>
                     <div class="col-xl-5 col-lg-6 offset-xl-2 offset-lg-1" data-anime='{"opacity": [0,1], "duration": 600, "delay":200, "staggervalue": 200, "easing": "easeOutQuad" }'>
                         <div class="accordion accordion-style-02" id="accordion-style-02" data-active-icon="icon-feather-minus" data-inactive-icon="icon-feather-plus">
@@ -1464,7 +1480,7 @@
 
                             </ul>
                             <div class="pricing-footer w-100">
-                                <a href="#" class="btn btn-small btn-dark-gray btn-box-shadow btn-round-edge border-1 w-100">Contáctanos</a>
+                                <a href="/contacto" class="btn btn-small btn-dark-gray btn-box-shadow btn-round-edge border-1 w-100">Contáctanos</a>
                             </div>
                         </div>
                     </div> 
@@ -1500,7 +1516,7 @@
                     
                             </ul>
                             <div class="pricing-footer w-100">
-                                <a href="#" class="btn btn-small btn-dark-gray btn-box-shadow btn-round-edge border-1 w-100">Contáctanos</a>
+                                <a href="/contacto" class="btn btn-small btn-dark-gray btn-box-shadow btn-round-edge border-1 w-100">Contáctanos</a>
                             </div>
                         </div>
                     </div>
@@ -1536,7 +1552,7 @@
                     
                             </ul>
                             <div class="pricing-footer w-100">
-                                <a href="#" class="btn btn-small btn-dark-gray btn-box-shadow btn-round-edge border-1 w-100">Contáctanos</a>
+                                <a href="/contacto" class="btn btn-small btn-dark-gray btn-box-shadow btn-round-edge border-1 w-100">Contáctanos</a>
                             </div>
                         </div>
                     </div>
@@ -1788,7 +1804,7 @@
                             <img loading="lazy" src="/.netlify/images?url=/images/ernesto.jpg?&fit=cover&w=600&h=765&fm=webp" alt="" />
                             <div class="w-100 h-100 d-flex flex-column justify-content-center align-items-center p-40px team-content bg-gradient-dark-orange-transparent">
                                 <div class="social-icon fs-20">
-                                    <a href="http://www.linkedin.com" aria-label="Ernesto's LinkedIn" target="_blank" class="text-white"><i class="fa-brands fa-linkedin"></i></a>
+                                    <a href="https://www.linkedin.com/in/jesus-ernesto-brise%C3%B1o-alcantara-98979a8b/" no-follow aria-label="Ernesto's LinkedIn" target="_blank" class="text-white"><i class="fa-brands fa-linkedin"></i></a>
                                 </div>                               
                             </div>
                         </div>
@@ -1807,7 +1823,7 @@
                             Cuenta con un MBA por el IPADE y una licenciatura en Administración y Finanzas por la Universidad Panamericana. 
                             Además tiene certificaciones avalados por la AMIB en México y por FINRA en USA para el manejo de inversiones.
                         </p>
-                        <a href="#" class="btn btn-small btn-dark-gray btn-box-shadow btn-round-edge border-1 w-100 mt-30px">Habla conmigo</a>
+                        <a href="/contacto" class="btn btn-small btn-dark-gray btn-box-shadow btn-round-edge border-1 w-100 mt-30px">Habla conmigo</a>
                     </div>
                     <!-- end team member item -->
                     <!-- start team member item -->
@@ -1840,15 +1856,15 @@
                             <li class="grid-item">
                                 <div class="card border-0 border-radius-4px box-shadow-quadruple-large">
                                     <div class="blog-image">
-                                        <a aria-label="Cómo Diversificar tu Portafolio y Minimizar Riesgos" href="demo-consulting-blog-single-modern.html" class="d-block"><img height="460" width="600" loading="lazy" src="/.netlify/images?url=/images/blog-1.jpg?&fit=cover&w=600&h=460&fm=webp" alt="" /></a>
+                                        <a aria-label="Cómo Diversificar tu Portafolio y Minimizar Riesgos" href="/blog/como-diversificar-tu-portafolio" class="d-block"><img height="460" width="600" loading="lazy" src="/.netlify/images?url=/images/blog-1.jpg?&fit=cover&w=600&h=460&fm=webp" alt="" /></a>
                                     </div>
                                     <div class="card-body p-13 md-p-11">
-                                        <a href="demo-consulting-blog-single-modern.html" class="card-title mb-15px alt-font fw-600 fs-20 text-dark-gray d-inline-block">Cómo Diversificar tu Portafolio y Minimizar Riesgos</a>
+                                        <a href="/blog/como-diversificar-tu-portafolio" class="card-title mb-15px alt-font fw-600 fs-20 text-dark-gray d-inline-block">Cómo Diversificar tu Portafolio y Minimizar Riesgos</a>
                                         <p>Descubre por qué la diversificación es clave en...</p>
                                         <div class="author d-flex justify-content-center align-items-center position-relative overflow-hidden fs-16">
                                             <div class="me-auto">
                                                 <span class="blog-date d-inline-block">3 febrero 2025</span>
-                                                <div class="d-inline-block author-name">Por <a href="demo-consulting-news.html" class="text-dark-gray text-decoration-line-bottom fw-600">Ernesto Briseño</a></div>
+                                                <div class="d-inline-block author-name">Por <a href="#" class="text-dark-gray text-decoration-line-bottom fw-600">Ernesto Briseño</a></div>
                                             </div>
                                         </div>
                                     </div>
@@ -1859,18 +1875,18 @@
                             <li class="grid-item">
                                 <div class="card border-0 border-radius-4px box-shadow-quadruple-large">
                                     <div class="blog-image">
-                                        <a aria-label="Fondos Indexados vs. Gestión Activa: ¿Cuál es Mejor para Ti?" href="demo-consulting-blog-single-modern.html" class="d-block"><img height="460" width="600" loading="lazy" src="/.netlify/images?url=/images/blog-2.jpg?&fit=cover&w=600&h=460&fm=webp"
+                                        <a aria-label="Fondos Indexados vs. Gestión Activa: ¿Cuál es Mejor para Ti?" href="/blog/como-diversificar-tu-portafolio" class="d-block"><img height="460" width="600" loading="lazy" src="/.netlify/images?url=/images/blog-2.jpg?&fit=cover&w=600&h=460&fm=webp"
                                                 alt="" /></a>
                                     </div>
                                     <div class="card-body p-13 md-p-11">
-                                        <a href="demo-consulting-blog-single-modern.html"
+                                        <a href="/blog/como-diversificar-tu-portafolio"
                                             class="card-title mb-15px alt-font fw-600 fs-20 text-dark-gray d-inline-block">Fondos Indexados vs. Gestión Activa: ¿Cuál es Mejor para Ti?</a>
                                         <p>Analizamos las diferencias entre fondos...</p>
                                         <div
                                             class="author d-flex justify-content-center align-items-center position-relative overflow-hidden fs-16">
                                             <div class="me-auto">
                                                 <span class="blog-date d-inline-block">8 febrero 2025</span>
-                                                <div class="d-inline-block author-name">Por <a href="demo-consulting-news.html"
+                                                <div class="d-inline-block author-name">Por <a href="#"
                                                         class="text-dark-gray text-decoration-line-bottom fw-600">Ernesto Briseño</a></div>
                                             </div>
                                         </div>
@@ -1882,18 +1898,18 @@
                             <li class="grid-item">
                                 <div class="card border-0 border-radius-4px box-shadow-quadruple-large">
                                     <div class="blog-image">
-                                        <a aria-label="Invertir en el Extranjero: Beneficios y Consideraciones Clave" href="demo-consulting-blog-single-modern.html" class="d-block"><img height="460" width="600" loading="lazy" src="/.netlify/images?url=/images/blog-3.jpg?&fit=cover&w=600&h=460&fm=webp"
+                                        <a aria-label="Invertir en el Extranjero: Beneficios y Consideraciones Clave" href="/blog/como-diversificar-tu-portafolio" class="d-block"><img height="460" width="600" loading="lazy" src="/.netlify/images?url=/images/blog-3.jpg?&fit=cover&w=600&h=460&fm=webp"
                                                 alt="" /></a>
                                     </div>
                                     <div class="card-body p-13 md-p-11">
-                                        <a href="demo-consulting-blog-single-modern.html"
+                                        <a href="/blog/como-diversificar-tu-portafolio"
                                             class="card-title mb-15px alt-font fw-600 fs-20 text-dark-gray d-inline-block">Invertir en el Extranjero: Beneficios y Consideraciones</a>
                                         <p>Acceder a mercados internacionales puede...</p>
                                         <div
                                             class="author d-flex justify-content-center align-items-center position-relative overflow-hidden fs-16">
                                             <div class="me-auto">
                                                 <span class="blog-date d-inline-block">15 febrero 2025</span>
-                                                <div class="d-inline-block author-name">Por <a href="demo-consulting-news.html"
+                                                <div class="d-inline-block author-name">Por <a href="#"
                                                         class="text-dark-gray text-decoration-line-bottom fw-600">Ernesto Briseño</a></div>
                                             </div>
                                         </div>
@@ -1923,7 +1939,7 @@
                                 <i class="line-icon-Handshake icon-extra-large text-white lh-100"></i>
                             </div>
                             <div class="feature-box-content last-paragraph-no-margin xs-mt-15px xs-mb-15px">
-                                <span class="fs-24 lh-32 xs-fs-22 xs-lh-32 text-white">¿Estás buscando asesoría? <a href="mailto:info@yourdomain.com" class="text-decoration-line-bottom text-white fw-500">ernesto@finoasis.mx</a></span>
+                                <span class="fs-24 lh-32 xs-fs-22 xs-lh-32 text-white">¿Estás buscando asesoría? <a href="mailto:ernesto@finoasis.mx" class="text-decoration-line-bottom text-white fw-500">ernesto@finoasis.mx</a></span>
                             </div>
                         </div>
                     </div> 
@@ -2022,9 +2038,11 @@
                     <div class="col-5 col-lg-2 offset-xl-1 col-md-3 col-sm-6 md-mb-30px">
                         <span class="alt-font d-block text-dark-gray fw-600 mb-10px fs-19">Empresa</span>
                         <ul>
-                            <li><a href="demo-consulting-company.html">Equipo</a></li>
-                            <li><a href="demo-consulting-services.html">Servicios</a></li>
-                            <li><a href="demo-consulting-contact.html">Contacto</a></li>
+                            <li><a href="/">Inicio</a></li>
+                            <li><a href="/equipo">Equipo</a></li>
+                            <li><a href="/servicios">Servicios</a></li>
+                            <li><a href="/contacto">Blog</a></li>
+                            <li><a href="/contacto">Contacto</a></li>
                         </ul>
                     </div>
                     <!-- end footer column -->
@@ -2063,8 +2081,8 @@
                     <!-- start footer menu -->
                     <div class="col-lg-6 pt-25px pb-25px md-pb-5px fs-16 order-1 order-lg-2 text-center text-lg-end">
                         <ul class="footer-navbar md-lh-normal"> 
-                            <li class="nav-item"><a href="#" class="nav-link">Política de Privacidad</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link">Términos y Condiciones</a></li>
+                            <li class="nav-item"><a href="/politica-de-privacidad" class="nav-link">Política de Privacidad</a></li>
+                            <li class="nav-item"><a href="/terminos-y-condiciones" class="nav-link">Términos y Condiciones</a></li>
                         </ul>
                     </div>
                     <!-- end footer menu -->
