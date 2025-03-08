@@ -776,3 +776,9 @@ readers do not read off random characters that represent icons */
         row-gap: 30px;
     }
 }
+
+.swiper-logos {
+    --swiper-wrapper-transition-timing-function: linear;
+    pointer-events: none;
+    margin-top: 30px;
+}
