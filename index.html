@@ -486,6 +486,16 @@
             75% { transform: translate(15%, 10%); }
             100% { transform: translate(0, 0) rotate(180deg); }
             }
+            @media (max-width: 767.98px) {
+                @keyframes floatAround {
+                0% { transform: translate(0, 0) rotate(0); }
+                25% { transform: translate(10%, -10%) rotate(-180deg); }
+                50% { transform: translate(30%, -20%) rotate(-90deg);; }
+                75% { transform: translate(10%, 0%); }
+                75% { transform: translate(15%, -10%); }
+                100% { transform: translate(0, 0) rotate(180deg); }
+                }
+            }
 
             header nav {
                 display: flex;
@@ -545,6 +555,9 @@
                     display: none;
                 }
 
+                .header-separator {
+                    display: none;
+                }
                 .top-header {
                     display: none !important;
                 }
@@ -651,7 +664,7 @@
                     margin-bottom: 25px;
                 }
                 section.hero-section .container p {
-                    width: 70vw; 
+                    width: 100%; 
                 }
                 .svg-container {
                     height: 230px;
@@ -806,6 +819,9 @@
         <script>
             window.addEventListener("DOMContentLoaded", function () {
 
+                    const header = document.querySelector("header");
+
+
                     console.log("✅ Page loaded, now loading stylesheets...");
 
                     let stylesheets = [
@@ -821,6 +837,16 @@
                         loadedCount++;
                         if (loadedCount === stylesheets.length) {
                             console.log("✅ All stylesheets loaded, now loading scripts in order...");
+                            
+                            if (window.innerWidth >= 992) {
+                                document.addEventListener("scroll", () => {
+                                    if (window.scrollY >= 46) {
+                                        header.classList.add("hide");
+                                    } else {
+                                        header.classList.remove("hide");
+                                    }
+                                });
+                            }
                             loadScriptsSequentially([
                                 "js/jquery.js",
                                 "js/vendors.min.js",
@@ -1983,18 +2009,6 @@
 <script defer src="js/vendors.min.js"></script>
 <script defer src="js/main.js"></script> -->
         <script>
-            
-            const header = document.querySelector("header");
-
-            if (window.innerWidth >= 992) {
-                document.addEventListener("scroll", () => {
-                    if (window.scrollY >= 46) {
-                        header.classList.add("hide");
-                    } else {
-                        header.classList.remove("hide");
-                    }
-                });
-            }
 
             const mobileMenuIcon = document.querySelector(".mobile-menu-icon");
             mobileMenuIcon.addEventListener("click", () => {
@@ -2003,18 +2017,18 @@
             });
 
             setTimeout(() => {
-                var isMobile = false,
-                isiPhoneiPad = false,
-                isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+                // var isMobile = false,
+                // isiPhoneiPad = false,
+                // isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
-                if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-                    isMobile = true;
-                }
+                // if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                //     isMobile = true;
+                // }
 
-                if (!isMobile) {
+                // if (!isMobile) {
                     let svgContainer = document.querySelector(".svg-container");
                     svgContainer.classList.add('float');
-                }
+                // }
             }, 1000)
 
             window.onbeforeunload = function () {
