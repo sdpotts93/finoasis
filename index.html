@@ -523,6 +523,12 @@
                 margin-top: 0;
                 padding: 0;
             }
+            .navigation li.dropdown-custom-item {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
 
             ul li {
                 list-style: none;
@@ -841,6 +847,32 @@
             .disabled-link {
                 pointer-events: none;
             }
+
+            .dropdown-custom-menu li {
+                padding-bottom: 10px;
+                margin-bottom: 20px;
+            }
+            .dropdown-custom-menu li:not(:last-child) {
+                border-bottom: 1px solid #d7d7d7;
+            }
+            .dropdown-custom-menu {
+                position: absolute;
+                padding-left: 0;
+                background-color: white;
+                padding: 35px;
+                top: calc(100% - 10px);
+                box-shadow: 0 0 35px 0 rgba(0, 0, 0, 0.1);
+                padding-bottom: 5px;
+                transition: all 0.5s ease-out;
+                pointer-events: none;
+                transform: translateY(-30px);
+                opacity: 0;
+            }
+            .dropdown-custom-menu.visible {
+                transform: translateY(0px);
+                pointer-events: all;
+                opacity: 1;
+            }
         </style>
         <script>
             window.addEventListener("DOMContentLoaded", function () {
@@ -965,6 +997,12 @@
                             <a href="/servicios">
                                 Servicios
                             </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a href="/servicios/gestion-de-inversiones">Gestión de inversiones</a></li>
+                                <li><a href="/servicios/coaching-financiero">Coaching financiero</a></li>
+                                <li><a href="/servicios/ahorro-para-la-educacion">Ahorro para la educación</a></li>
+                                <li><a href="/servicios/inversiones-extranjeras">Inversiones extranjeras</a></li>
+                            </ul>
                         </li>
                         <li>
                             <a href="/acerca-de">
@@ -1067,10 +1105,16 @@
                             Inicio
                         </a>
                     </li>
-                    <li>
+                    <li class="dropdown-custom-item">
                         <a href="/servicios">
                             Servicios
                         </a>
+                        <ul class="dropdown-custom-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a href="/servicios/gestion-de-inversiones">Gestión de inversiones</a></li>
+                            <li><a href="/servicios/coaching-financiero">Coaching financiero</a></li>
+                            <li><a href="/servicios/ahorro-para-la-educacion">Ahorro para la educación</a></li>
+                            <li><a href="/servicios/inversiones-extranjeras">Inversiones extranjeras</a></li>
+                        </ul>
                     </li>
                     <li>
                         <a href="/acerca-de">
@@ -2046,7 +2090,9 @@
                         <ul>
                             <li><a href="#" class="current-page disabled-link">Inicio</a></li>
                             <li><a href="/acerca-de">Acerca de</a></li>
-                            <li><a href="/servicios">Servicios</a></li>
+                            <li>
+                                <a href="/servicios">Servicios</a>
+                            </li>
                             <li><a href="/contacto">Blog</a></li>
                             <li><a href="/contacto">Contacto</a></li>
                         </ul>
@@ -2108,6 +2154,26 @@
 <script defer src="js/vendors.min.js"></script>
 <script defer src="js/main.js"></script> -->
         <script>
+
+            const dropdownCustomItem = document.querySelector(".dropdown-custom-item");
+            const dropdownMenu = document.querySelector(".dropdown-custom-menu");
+            const header = document.querySelector("header");
+
+            dropdownCustomItem.addEventListener("mouseenter", () => {
+                dropdownMenu.classList.add("visible");
+            });
+
+            header.addEventListener("mouseleave", (event) => {
+                if (!header.contains(event.relatedTarget)) {
+                    dropdownMenu.classList.remove("visible");
+                }
+            });
+
+            document.querySelectorAll(".navigation > li:not(.dropdown-custom-item)").forEach(item => {
+                item.addEventListener("mouseenter", () => {
+                    dropdownMenu.classList.remove("visible");
+                })
+            })
 
             const mobileMenuIcon = document.querySelector(".mobile-menu-icon");
             mobileMenuIcon.addEventListener("click", () => {
