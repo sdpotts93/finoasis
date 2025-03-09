@@ -835,6 +835,12 @@
                 margin-bottom: 30px;
                 display: block;
             }
+            .current-page {
+                opacity: 0.5;
+            }
+            .disabled-link {
+                pointer-events: none;
+            }
         </style>
         <script>
             window.addEventListener("DOMContentLoaded", function () {
@@ -951,7 +957,7 @@
                 <div class="mobile-menu">
                     <ul class="mobile-navigation">
                         <li>
-                            <a href="/">
+                            <a class="current-page disabled-link" href="#">
                                 Inicio
                             </a>
                         </li>
@@ -978,7 +984,7 @@
                     </ul>
                 </div>
                 <div class="logo-container">
-                    <a href="/" aria-label="Homepage link con logo de finoasis">
+                    <a href="#" aria-label="Homepage link con logo de finoasis" class="disabled-link">
                     <svg width="4023" height="336" viewBox="0 0 4023 336" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle class="letter" cx="1713.5" cy="167.5" r="140.5" stroke="#292D36" stroke-width="54" />
                         <path
@@ -1057,7 +1063,7 @@
                 </div>
                 <ul class="navigation">
                     <li>
-                        <a href="/">
+                        <a class="current-page disabled-link" href="/">
                             Inicio
                         </a>
                     </li>
@@ -2038,7 +2044,7 @@
                     <div class="col-5 col-lg-2 offset-xl-1 col-md-3 col-sm-6 md-mb-30px">
                         <span class="alt-font d-block text-dark-gray fw-600 mb-10px fs-19">Empresa</span>
                         <ul>
-                            <li><a href="/">Inicio</a></li>
+                            <li><a href="#" class="current-page disabled-link">Inicio</a></li>
                             <li><a href="/acerca-de">Acerca de</a></li>
                             <li><a href="/servicios">Servicios</a></li>
                             <li><a href="/contacto">Blog</a></li>
