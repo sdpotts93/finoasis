@@ -2075,6 +2075,7 @@
             actionURL = formObj.attr('action'),
             resultsObj = formObj.find('.form-results'),
             grecaptchav3 = _this.attr('data-sitekey') || '',
+            submitButton = formObj.find('input[type="submit"]'),
             redirectVal = formObj.find('[name="redirect"]').val();
         formObj.find('.required').removeClass('is-invalid');
         formObj.find('.required').each(function () {
@@ -2120,12 +2121,14 @@
 
         if (!error && actionURL != '' && actionURL != undefined) {
             _this.addClass('loading');
+            submitButton.prop("disabled", true);
             $.ajax({
                 type: 'POST',
                 url: actionURL,
                 data: formObj.serialize(),
                 success: function (result) {
                     _this.removeClass('loading');
+                    submitButton.prop("disabled", false);
                     if (redirectVal != '' && redirectVal != undefined) {
                         window.location.href = redirectVal;
                     } else {
@@ -2145,6 +2148,13 @@
                         resultsObj.addClass(result.alert).html(result.message);
                         resultsObj.removeClass('d-none').fadeIn('slow').delay(4000).fadeOut('slow');
                     }
+                },
+                error: function (xhr, status, error) {
+                    _this.removeClass('loading');
+                    submitButton.prop("disabled", false);
+                    resultsObj.removeClass('alert-success').addClass('alert-danger');
+                    resultsObj.html("Hubo un error al enviar el formulario. Intenta de nuevo.");
+                    resultsObj.removeClass('d-none').fadeIn('slow').delay(4000).fadeOut('slow');
                 }
             });
         }
