@@ -773,3 +773,31 @@ readers do not read off random characters that represent icons */
 .bi-wallet2::before {
   content: "\f615";
 }
+
+.fa-check::before {
+  content: "\f00c";
+}
+
+.line-icon-Lock:before {
+  content: "\ea5c";
+}
+
+.line-icon-Line-Chart:before {
+  content: "\ea45";
+}
+.line-icon-Books-2:before {
+  content: "\e6d6";
+}
+
+.line-icon-MaleFemale:before {
+  content: "\ea93";
+}
+
+.swiper-logos {
+  --swiper-wrapper-transition-timing-function: linear;
+  pointer-events: none;
+}
+
+.swiper-logos img {
+  filter: invert(1);
+}
