@@ -1022,6 +1022,13 @@
       display: block;
     }
 
+    .current-page {
+        opacity: 0.5;
+    }
+    .disabled-link {
+        pointer-events: none;
+    }
+
     .dropdown-custom-menu li {
         padding-bottom: 10px;
         margin-bottom: 20px;
@@ -1175,7 +1182,7 @@
             </a>
           </li>
           <li>
-            <a href="/acerca-de">
+            <a class="current-page disabled-link" href="/acerca-de">
               Acerca de
             </a>
           </li>
@@ -1287,7 +1294,7 @@
           </ul>
         </li>
         <li>
-          <a href="/acerca-de">
+          <a class="current-page disabled-link" href="/acerca-de">
             Acerca de
           </a>
         </li>
@@ -1911,7 +1918,7 @@
           <span class="alt-font d-block text-dark-gray fw-600 mb-10px fs-19">Empresa</span>
           <ul>
             <li><a href="/">Inicio</a></li>
-            <li><a href="/acerca-de">Acerca de</a></li>
+            <li><a class="current-page disabled-link" href="/acerca-de">Acerca de</a></li>
             <li><a href="/servicios">Servicios</a></li>
             <li><a href="/contacto">Blog</a></li>
             <li><a href="/contacto">Contacto</a></li>
