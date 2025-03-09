@@ -130,9 +130,10 @@ footer .footer-logo img {
 }
 
 .footer-logo-custom {
-    width: 100%;
+    width: 90%;
     height: auto;
     margin-bottom: 30px;
+    margin-top: 10px;
     max-width: 300px;
 }
 
@@ -159,7 +160,6 @@ footer a {
     .footer-logo-custom {
         width: 73%;
         margin-bottom: 11px;
-        margin-top: 10px;
     }
     .services-mobile {
         display: flex;
