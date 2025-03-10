@@ -1401,6 +1401,7 @@
   <section class="one-fourth-screen sm-mb-50px bg-dark-gray" data-parallax-background-ratio="0.5"
     {{ backgroundImage }}></section>
   <!-- end section -->
+
   <!-- start section -->
   <section class="p-0">
     <div class="container">
@@ -1421,10 +1422,27 @@
   <!-- end section -->
   <!-- start section -->
   <section class="overlap-section text-center p-0 sm-pt-30px">
-    <img class="rounded-circle box-shadow-extra-large w-130px h-130px border border-8 border-color-white"
-      src="https://placehold.co/125x125" alt="">
+    <img loading="lazy" height="125" width="125" class="rounded-circle box-shadow-extra-large w-130px h-130px border border-8 border-color-white"
+      src="{{ backgroundUrl }}" alt="">
   </section>
   <!-- end section -->
+
+
+  <!-- start section -->
+  <section class="pb-0 pt-3">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-9 dropcap-style-01"
+          data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+          <p class="mb-6"><span class="alt-font first-letter text-dark-gray">{{ description_first_letter }}</span>
+            {{ description_content }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end section -->
+
   <!-- start section -->
   <section class="pb-0 pt-3">
     <div class="container">
