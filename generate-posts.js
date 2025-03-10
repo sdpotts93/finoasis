@@ -17,10 +17,14 @@ function replacePlaceholders(template, data) {
 
   let backgroundImage = `https://finoasis.mx/.netlify/images?url=${data.thumbnail}?&fit=cover&w=1920&h=1100&fm=webp`;
   let backgroundUrl = `https://finoasis.mx/.netlify/images?url=${data.thumbnail}?&fit=cover&w=125&h=125&fm=webp`;
+  let metaImage = `https://finoasis.mx/.netlify/images?url=${data.thumbnail}?&fit=cover&w=1200&h=630&fm=webp`;
 
   return template
     .replace(/{{ backgroundImage }}/g, ` style="background-image:url(${backgroundImage})" `)
     .replace(/{{ backgroundUrl }}/g, backgroundUrl || "")
+    .replace(/{{ meta_title }}/g, data.seo?.metaTitle || data.title)
+    .replace(/{{ meta_description }}/g, data.seo?.metaDescription || data.description)
+    .replace(/{{ meta_image }}/g, metaImage || "https://finoasis.mx/images/og-image.png")
     .replace(/{{ theme }}/g, data.theme || "")
     .replace(/{{ title }}/g, data.title || "Untitled Post")
     .replace(/{{ author }}/g, data.author || "Anonymous")
