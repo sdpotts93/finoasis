@@ -1,2 +1,2 @@
 [build]
-  command = "node generate-posts.js"
+  command = "node generate-posts.js && node generate-recent-posts.js"
