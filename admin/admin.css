@@ -1,0 +1,100 @@
+:root {
+  font-size: 16px;
+  font-size: clamp(16px, calc(1vw + 1vh + 0.2vmin), 100px);
+
+  --title: 'Kanit',
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+  --black: #161616;
+  --light-black: rgb(30, 30, 30);
+  --padding-horizontal-page: 2rem;
+  --header-height: 80px;
+  --main-color: #FFFFFF;
+  --secondary-color: var(--black);
+  --accent-color: #BC945C;
+  --section-spacing: 6rem;
+  --font-size-link: max(16px, 0.7rem);
+  --nav-bar-width: 6.5rem;
+  --font-size-section: 3rem;
+}
+
+@media screen and (max-width: 767px) {
+  :root {
+    --section-spacing: 4rem;
+    --padding-horizontal-page: 1rem;
+    --nav-bar-width: var(--padding-horizontal-page);
+  }
+}
+
+.frame-content {
+  margin: 1rem;
+}
+
+.frame-content > div > div + div {
+  margin-top: 0.5rem;
+  border-top: 1px dashed #dfdfe3;
+  padding-top: 0.5rem;
+}
+
+.frame-content img {
+  max-width: 100%;
+}
+html {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  background-color: #ECEFF5;
+  color: #1C263B;
+}
+
+body * {
+  min-height: 100%;
+  margin: 0;
+  font-family:
+    'Red Hat Display',
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  line-height: 1.4;
+  background-color: var(--main-color);
+  color: var(--secondary-color);
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Inter, system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,BlinkMacSystemFont,Helvetica Neue,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+}

@@ -1,0 +1,54 @@
+# disable in production:  
+local_backend: true
+# command to run a local Decap instance: npx-decap-server
+
+locale: 'es'
+logo_url: https://finoasis.mx/images/finoasis-logo.svg
+
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "/uploads"
+public_folder: "/uploads"
+
+
+collections:
+  - name: "blog" # Used in routes, e.g., /admin/collections/blog
+    label: "Blog" # Used in the UI
+    folder: "content/blog" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Layout", name: "layout", widget: "hidden", default: "blog" }
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Autor", name: "author", widget: "string" }
+      - { label: "Descripción o resumen", name: "description", widget: "string" }
+      - { label: "Fecha de publicación", name: "date", widget: "datetime" }
+      - { label: "Imagen destacada", name: "thumbnail", widget: "image" }
+      - { label: "Cuerpo", name: "body", widget: "markdown" }
+      - { label: "Duración de lectura", name: "duration", widget: "number" }
+      - { label: "Temas", name: "tags", widget: "list", allow_add: true }
+      - { label: "Posts relacionados", name: "related", widget: "relation", collection: "blog", search_fields: ["title"], value_field: "title", display_fields: ["title"], multiple: true, required: false }
+      - { label: "Publicado", name: "publish", widget: "boolean", default: false }
+      - {
+        label: 'SEO', name: 'seo', widget: 'object', required: false, collapsed: true, hint: "Si no se especifican los valores se obtendrán de la información anterior.",
+        fields: [
+          { label: 'Título para buscador', name: "metaTitle", widget: 'string', required: false },
+          { label: 'Descripción para buscador', name: 'metaDescription', widget: 'string', pattern: [".{20,160}", "between 20 and 160 characters"], hint: "Debe de tener entre 20 y 160 caracteres.", required: false },
+          { name: "metaImage", label: "Imagen SEO", widget: "image", required: false }
+        ]
+      }
+  
+  - name: "resources" # Used in routes, e.g., /admin/collections/resources
+    label: "Recurso" # Used in the UI
+    folder: "content/resources" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Layout", name: "layout", widget: "hidden", default: "resources" }
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Fecha de publicación", name: "date", widget: "datetime" }
+      - { label: "Descripción o resumen", name: "description", widget: "string" }
+      - { label: "Imagen destacada", name: "thumbnail", widget: "image" }
+      - { label: "Archivo", name: "manual_pdf", widget: "file" }
