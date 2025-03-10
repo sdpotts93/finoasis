@@ -964,7 +964,8 @@
     }
 
     .mobile-menu ul li {
-      margin-bottom: 35px;
+        margin-bottom: 35px;
+        position: relative;
     }
 
     .mobile-menu {
@@ -1051,6 +1052,49 @@
         transform: translateY(0px);
         pointer-events: all;
         opacity: 1;
+    }
+
+
+
+    .dropdown-custom-mobile {
+        font-size: 0.6em;
+        margin-top: 25px;
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+        font-weight: 300;
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.5s ease-out;
+    }
+
+    .dropdown-custom-item-mobile.visible .dropdown-custom-mobile {
+        max-height: 220px;
+    }
+
+    .dropdown-custom-item-mobile.visible svg {
+        transform: rotate(-180deg);
+    }
+
+    .mobile-navigation {
+        margin-bottom: 0;
+        margin-top: 50px;
+    }
+    .mobile-navigation ul li:first-child {
+        margin-top: 15px;
+    }
+    .mobile-navigation ul li:last-child {
+        margin-bottom: 15px;
+    }
+    .mobile-navigation ul li:not(:last-child) {
+        margin-bottom: 15px;
+    }
+    .mobile-navigation li svg {
+        height: 30px;
+        width: 30px;
+        position: absolute;
+        top: 0px;
+        right: 0;
+        transition: all 0.5s ease 0.5s;
     }
   </style>
   <script>
@@ -1174,10 +1218,20 @@
               Inicio
             </a>
           </li>
-          <li>
+          <li class="dropdown-custom-item-mobile">
             <a href="/servicios">
               Servicios
             </a>
+            <ul class="dropdown-custom-mobile" aria-labelledby="navbarDropdownMenuLink">
+              <li><a href="/servicios/gestion-de-inversiones">Gestión de inversiones</a></li>
+              <li><a href="/servicios/coaching-financiero">Coaching financiero</a></li>
+              <li><a href="/servicios/ahorro-para-la-educacion">Ahorro para la educación</a></li>
+              <li><a href="/servicios/inversiones-extranjeras">Inversiones extranjeras</a></li>
+            </ul>
+            <svg width="800px" height="800px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+              <path fill="#ffffff"
+                d="M831.872 340.864 512 652.672 192.128 340.864a30.592 30.592 0 0 0-42.752 0 29.12 29.12 0 0 0 0 41.6L489.664 714.24a32 32 0 0 0 44.672 0l340.288-331.712a29.12 29.12 0 0 0 0-41.728 30.592 30.592 0 0 0-42.752 0z" />
+            </svg>
           </li>
           <li>
             <a href="/acerca-de">
@@ -1647,6 +1701,11 @@
 <script defer src="js/vendors.min.js"></script>
 <script defer src="js/main.js"></script> -->
   <script>
+    const dropdownMobileItem = document.querySelector(".dropdown-custom-item-mobile");
+    dropdownMobileItem.addEventListener("click", () => {
+      dropdownMobileItem.classList.toggle("visible");
+    });
+
 
 
     const dropdownCustomItem = document.querySelector(".dropdown-custom-item");
