@@ -1121,7 +1121,7 @@
         "/css/vendors.min.css",
         "/css/style.min.css",
         "/css/responsive.min.css",
-        "/css/service.css"
+        "/css/blog-template.css"
       ];
 
       let loadedCount = 0;
@@ -1399,7 +1399,7 @@
 
   <!-- start section -->
   <section class="one-fourth-screen sm-mb-50px bg-dark-gray" data-parallax-background-ratio="0.5"
-    style="background-image: url(https://placehold.co/1920x1100)"></section>
+    {{ backgroundImage }}></section>
   <!-- end section -->
   <!-- start section -->
   <section class="p-0">
@@ -1408,12 +1408,10 @@
         <div class="col-lg-10 overlap-section text-center">
           <div class="p-10 box-shadow-extra-large border-radius-4px bg-white text-center">
             <a href="demo-consulting-news.html"
-              class="btn btn-large btn-base-color btn-box-shadow fw-400 ps-20px pe-20px pt-5px pb-5px btn-round-edge-small mb-3 sm-mb-15px">Fashion</a>
-            <h3 class="alt-font text-dark-gray ls-minus-1px fw-600 mb-15px">Better to see something once than hear about
-              it a thousand times</h3>
+              class="btn btn-large btn-base-color btn-box-shadow fw-400 ps-20px pe-20px pt-5px pb-5px btn-round-edge-small mb-3 sm-mb-15px">{{ theme }}</a>
+            <h3 class="alt-font text-dark-gray ls-minus-1px fw-600 mb-15px">{{ title }}</h3>
             <div class="lg-mb-20px sm-mb-0">
-              <span>By <a href="demo-consulting-news.html" class="text-dark-gray">Shane smith</a></span> on <a
-                href="demo-consulting-news.html" class="text-dark-gray">26 March 2021</a>
+              <span>Por <span class="text-dark-gray">{{ author }}</span></span> on <span class="text-dark-gray">{{ creation_date }}</span>
             </div>
           </div>
         </div>
@@ -1433,134 +1431,31 @@
       <div class="row justify-content-center">
         <div class="col-lg-9 dropcap-style-01"
           data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
-          <p class="mb-6"><span class="alt-font first-letter text-dark-gray">M</span>lorem ipsum dolor sit amet
-            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua. Ut enim ad minim
-            veniam, quis nostrud exercitation and ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non sunt in culpa qui.</p>
-          <div class="row">
-            <div class="col-md-6 sm-mb-30px">
-              <div
-                class="border-radius-5px border-1 border border-color-light-medium-gray h-100 pt-8 pb-8 ps-10 pe-10 last-paragraph-no-margin">
-                <span class="fw-500 text-dark-gray mb-5px d-inline-block">A balanced diet is a cookie in hand</span>
-                <p>Lorem ipsum is simply dummy text of the printing typesetting industry lorem Ipsum been industry's
-                  standard dummy.</p>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div
-                class="border-radius-5px border-1 border border-color-light-medium-gray h-100  pt-8 pb-8 ps-10 pe-10 last-paragraph-no-margin">
-                <span class="fw-500 text-dark-gray mb-5px d-inline-block">Nature is wears the bright colors</span>
-                <p>Lorem ipsum is simply dummy text of the printing typesetting industry lorem Ipsum been industry's
-                  standard dummy.</p>
-              </div>
-            </div>
-          </div>
+            {{ content }}
         </div>
       </div>
     </div>
   </section>
   <!-- end section -->
-  <!-- start section -->
-  <section class="half-section"
-    data-anime='{ "translateY": [0, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 position-relative">
-          <img src="https://placehold.co/1190x750" alt="">
-          <a href="https://player.vimeo.com/video/75976293"
-            class="text-center bg-white rounded-circle video-icon-box video-icon-large popup-vimeo slide-up-animation absolute-middle-center">
-            <span>
-              <span class="video-icon bg-base-color">
-                <i class="fa-solid fa-play text-white"></i>
-                <span class="video-icon-sonar">
-                  <span class="video-icon-sonar-bfr bg-base-color"></span>
-                </span>
-              </span>
-            </span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- end section -->
-  <!-- start section -->
-  <section class="py-0">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-9 last-paragraph-no-margin"
-          data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
-          <h6 class="alt-font fw-500 text-dark-gray ls-minus-05px mb-15px">Success is the result of perfection and hard
-            work</h6>
-          <p class="mb-5">Lorem ipsum dolor sit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint
-            occaecat.</p>
-          <h6 class="alt-font fw-500 text-dark-gray ls-minus-05px mb-15px">It is better to fail in originality than to
-            succeed in imitation</h6>
-          <p>Lorem ipsum dolor sit sed do eiusmod tempor incididunt ut labore enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-            in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- end section -->
-  <!-- start section -->
-  <section class="half-section pb-0">
-    <div class="container">
-      <div class="row justify-content-center"
-        data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
-        <div class="mb-6">
-          <img src="https://placehold.co/1190x750" alt="">
-        </div>
-        <div class="col-lg-9 last-paragraph-no-margin">
-          <h6 class="alt-font fw-500 text-dark-gray ls-minus-05px mb-15px">Success is the result of perfection and hard
-            work</h6>
-          <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
-            dolores eos qui ratione sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-            consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt. Nemo enim ipsam voluptatem quia
-            voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione sequi nesciunt
-            numquam eius modi tempora incidunt.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- end section -->
+
   <!-- start section -->
   <section class="half-section">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-9"
           data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
-          <div class="row mb-30px">
-            <div class="tag-cloud col-md-9 text-center text-md-start sm-mb-15px">
-              <a href="demo-consulting-news.html">Development</a>
-              <a href="demo-consulting-news.html">Event</a>
-              <a href="demo-consulting-news.html">Multimedia </a>
-              <a href="demo-consulting-news.html">Fashion</a>
-            </div>
-            <div class="tag-cloud col-md-3 text-uppercase text-center text-md-end">
-              <a class="likes-count fw-500 mx-0" href="#"><i class="fa-regular fa-heart text-red me-10px"></i><span
-                  class="text-dark-gray text-dark-gray-hover">05 Likes</span></a>
-            </div>
-          </div>
           <div class="row">
             <div class="col-12 mb-6">
               <div
                 class="d-block d-md-flex w-100 box-shadow-extra-large align-items-center border-radius-4px p-7 sm-p-35px">
                 <div class="w-140px text-center me-50px sm-mx-auto">
-                  <img src="https://placehold.co/200x200" class="rounded-circle w-120px" alt="">
-                  <a href="demo-consulting-news.html" class="text-dark-gray fw-500 mt-20px d-inline-block lh-20">Colene
-                    Landin</a>
-                  <span class="fs-15 lh-20 d-block sm-mb-15px">Co-founder</span>
+                  <img loading="lazy" height="200" width="200" src="/.netlify/images?url=/images/ernesto.jpg?&fit=cover&w=200&h=200&position=top&fm=webp" class="rounded-circle w-120px" alt="">
+                  <a href="/acerca-de" class="text-dark-gray fw-500 mt-20px d-inline-block lh-20">Ernesto Briseño</a>
+                  <span class="fs-15 lh-20 d-block sm-mb-15px">Founder</span>
                 </div>
                 <div class="w-75 sm-w-100 text-center text-md-start last-paragraph-no-margin">
-                  <p>Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the
-                    industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type.</p>
-                  <a href="demo-consulting-news.html" class="btn btn-link btn-large text-dark-gray mt-15px">All author
-                    posts</a>
+                  <p>Especialista en asesoría patrimonial e inversiones estratégicas, con más de 15 años de experiencia. Posee un MBA por el
+                  IPADE, una licenciatura en Administración y Finanzas por la Universidad Panamericana y certificaciones de AMIB y FINRA.</p>
                 </div>
               </div>
             </div>
@@ -1570,14 +1465,10 @@
               <ul class="medium-icon dark">
                 <li><a class="facebook" href="https://www.facebook.com/" target="_blank"><i
                       class="fa-brands fa-facebook-f"></i><span></span></a></li>
-                <li><a class="twitter" href="http://www.twitter.com" target="_blank"><i
-                      class="fa-brands fa-twitter"></i><span></span></a></li>
                 <li><a class="instagram" href="http://www.instagram.com" target="_blank"><i
                       class="fa-brands fa-instagram"></i><span></span></a></li>
                 <li><a class="linkedin" href="http://www.linkedin.com" target="_blank"><i
                       class="fa-brands fa-linkedin-in"></i><span></span></a></li>
-                <li><a class="behance" href="http://www.behance.com/" target="_blank"><i
-                      class="fa-brands fa-behance"></i><span></span></a></li>
               </ul>
             </div>
           </div>
@@ -1586,8 +1477,6 @@
     </div>
   </section>
   <!-- end section -->
-   
-
   <!-- start footer -->
   <footer class="footer-light p-0 position-relative">
     <div id="particles-04" class="position-absolute h-100 top-0 left-0 z-index-minus-1 w-100" data-particle="true"
