@@ -5,9 +5,9 @@ const matter = require("gray-matter");
 const slugify = require("slugify");
 
 // Paths
-const CONTENT_DIR = path.join(__dirname, "content/blog");
-const BLOG_DIR = path.join(__dirname, "blog");
-const TEMPLATE_PATH = path.join(__dirname, "admin/blog-template.html");
+const CONTENT_DIR = path.join(__dirname, "/content/blog");
+const BLOG_DIR = path.join(__dirname, "/blog");
+const TEMPLATE_PATH = path.join(__dirname, "/admin/blog-template.html");
 
 // Load HTML Template
 const template = fs.readFileSync(TEMPLATE_PATH, "utf-8");
