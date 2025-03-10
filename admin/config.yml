@@ -27,7 +27,6 @@ collections:
       - { label: "Fecha de publicación", name: "date", widget: "datetime" }
       - { label: "Imagen destacada", name: "thumbnail", widget: "image" }
       - { label: "Cuerpo", name: "body", widget: "markdown" }
-      - { label: "Duración de lectura", name: "duration", widget: "number" }
       - { label: "Tema", name: "theme", widget: "string" }
       - {
         label: 'SEO', name: 'seo', widget: 'object', required: false, collapsed: true, hint: "Si no se especifican los valores se obtendrán de la información anterior.",
