@@ -14,9 +14,13 @@ const template = fs.readFileSync(TEMPLATE_PATH, "utf-8");
 
 // Function to replace placeholders in the template
 function replacePlaceholders(template, data) {
+
+  let backgroundImage = `https://finoasis.mx/.netlify/images?url=${data.thumbnail}?&fit=cover&w=1920&h=1100&fm=webp`;
+  let backgroundUrl = `https://finoasis.mx/.netlify/images?url=${data.thumbnail}?&fit=cover&w=125&h=125&fm=webp`;
+
   return template
-    .replace(/{{ backgroundImage }}/g, ` style="background-image:url(${data.thumbnail})" `)
-    .replace(/{{ backgroundUrl }}/g, data.thumbnail || "")
+    .replace(/{{ backgroundImage }}/g, ` style="background-image:url(${backgroundImage})" `)
+    .replace(/{{ backgroundUrl }}/g, backgroundUrl || "")
     .replace(/{{ theme }}/g, data.theme || "")
     .replace(/{{ title }}/g, data.title || "Untitled Post")
     .replace(/{{ author }}/g, data.author || "Anonymous")
