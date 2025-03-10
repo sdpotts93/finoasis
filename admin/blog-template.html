@@ -26,10 +26,10 @@
     content="Optimiza tus inversiones con asesoría independiente y estrategias sin costos ocultos.">
   <meta name="twitter:image" content="https://finoasis.mx/images/og-image.png">
 
-  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-  <link rel="manifest" href="favicon/site.webmanifest">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
   <!-- google fonts preconnect -->
   <!-- style sheets and font icons  -->
   <!-- <link rel="stylesheet" href="css/vendors.min.css"/>
@@ -70,7 +70,7 @@
 
     @font-face {
       font-family: "Lexend";
-      src: url("fonts/lexend.woff2") format("woff2");
+      src: url("/fonts/lexend.woff2") format("woff2");
       font-weight: 300 400 500 600 700 800;
       /* Adjust based on font's weight range */
       font-display: swap;
@@ -447,12 +447,12 @@
       align-items: center;
       justify-content: center;
       position: absolute;
-      height: 750px;
-      width: 750px;
-      right: -100px;
-      top: -150px;
+      height: 350px;
+      width: 350px;
+      right: 0px;
+      top: 100px;
       z-index: -1;
-      opacity: 0.5;
+      opacity: 0.4;
     }
 
     .svg-container.second {
@@ -461,8 +461,8 @@
       justify-content: center;
       position: absolute;
 
-      height: 350px;
-      width: 350px;
+      height: 450px;
+      width: 450px;
       left: 200px;
       top: -100px;
       z-index: -1;
@@ -647,10 +647,10 @@
       }
 
       .svg-container {
-        height: 550px;
-        width: 550px;
-        top: -120px;
-        right: -225px;
+        height: 300px;
+        width: 300px;
+        top: 120px;
+        right: 50px;
       }
 
       .svg-container.second {
@@ -804,21 +804,21 @@
       }
 
       section.hero-section {
-        padding-bottom: 130px;
+        padding-bottom: 80px;
       }
 
       .svg-container {
-        bottom: -130px;
+        bottom: -100px;
         opacity: 0.2;
         left: unset;
         right: -100px;
         top: unset;
-        height: 400px;
-        width: 400px;
+        height: 300px;
+        width: 300px;
       }
 
       .svg-container.second {
-        left: -100px;
+        left: 0px;
         height: 200px;
         width: 200px;
         top: -100px;
@@ -829,7 +829,7 @@
       }
 
       h1 {
-        font-size: clamp(45px, calc(6.5vw + 2.5vh + 0.1vmin), 100px);
+        font-size: clamp(45px, calc(6.5vw + 2.5vh + 1vmin), 100px);
       }
 
       html {
@@ -840,7 +840,7 @@
       h1 {
         max-width: 100%;
         margin-bottom: 25px;
-        min-height: 3.6em;
+        min-height: 6em;
       }
 
       h1 br {
@@ -1063,6 +1063,7 @@
 
 
 
+
     .dropdown-custom-mobile {
       font-size: 0.6em;
       margin-top: 25px;
@@ -1117,10 +1118,10 @@
       console.log("✅ Page loaded, now loading stylesheets...");
 
       let stylesheets = [
-        "css/vendors.min.css",
-        "css/style.min.css",
-        "css/responsive.min.css",
-        "css/services.css"
+        "/css/vendors.min.css",
+        "/css/style.min.css",
+        "/css/responsive.min.css",
+        "/css/service.css"
       ];
 
       let loadedCount = 0;
@@ -1140,9 +1141,9 @@
             });
           }
           loadScriptsSequentially([
-            "js/jquery.js",
-            "js/vendors.min.js",
-            "js/main.js"
+            "/js/jquery.js",
+            "/js/vendors.min.js",
+            "/js/main.js"
           ]);
         }
       }
@@ -1192,7 +1193,7 @@
     <div class="top-header container">
       <div class="top-header-col">
         Comienza a crecer tu dinero
-        <a href="/contacto">
+        <a href="#formulario">
           Contáctanos ahora
         </a>
       </div>
@@ -1230,7 +1231,7 @@
             </a>
           </li>
           <li class="dropdown-custom-item-mobile">
-            <a class="current-page disabled-link" href="/servicios">
+            <a href="/servicios">
               Servicios
             </a>
             <ul class="dropdown-custom-mobile" aria-labelledby="navbarDropdownMenuLink">
@@ -1346,13 +1347,15 @@
           </a>
         </li>
         <li class="dropdown-custom-item">
-          <a class="current-page disabled-link" href="/servicios">
+          <a href="/servicios">
             Servicios
           </a>
           <ul class="dropdown-custom-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a href="/servicios/gestion-de-inversiones">Gestión de inversiones</a></li>
+            <li><a href="/servicios/gestion-de-inversiones">Gestión de
+                inversiones</a></li>
             <li><a href="/servicios/coaching-financiero">Coaching financiero</a></li>
-            <li><a href="/servicios/ahorro-para-la-educacion">Ahorro para la educación</a></li>
+            <li><a class="current-page disabled-link" href="/servicios/ahorro-para-la-educacion">Ahorro para la
+                educación</a></li>
             <li><a href="/servicios/inversiones-extranjeras">Inversiones extranjeras</a></li>
           </ul>
         </li>
@@ -1392,339 +1395,198 @@
         </div>  -->
   <!-- start header -->
   <!-- end header -->
+
+
   <!-- start section -->
-  <section class="hero-section">
-    <div class="container">
-      <h1 class="hero-title">
-        Construye un patrimonio
-        <br>
-        <span data-fancy-text='{ "effect": "rotate", "string": ["sólido", "abundante", "creciente"] }'></span>
-      </h1>
-      <p>
-        Invierte a través de asesoría independiente con acceso a instituciones globales y planes diseñados para
-        maximizar tu crecimiento financiero.
-      </p>
-      <a href="/servicios/#servicios" class="btn btn-base-color btn-box-shadow btn-large btn-round-edge">
-        Descubre nuestros servicios
-      </a>
-      <svg class="animated-element svg-container second float" width="478" height="478" viewBox="0 0 478 478"
-        fill="none" xmlns="http://www.w3.org/2000/svg">
-
-        <path fill-rule="evenodd" clip-rule="evenodd"
-          d="M333.282 143.637C333.465 150.634 333.112 157.487 332.268 164.135C331.571 164.143 330.871 164.156 330.171 164.174C310.417 164.692 292.027 169.422 276.353 177.238C274.041 157.936 265.819 137.989 252.102 120.285C271.262 100.702 294.604 88.5707 317.425 84.5649C326.901 101.317 332.706 121.63 333.282 143.637ZM185.336 74.5162C154.213 65.8832 122.872 71.6492 102.756 92.8462C86.0188 110.483 80.3566 135.32 84.8307 160.807C56.7206 176.709 38.6374 202.947 39.4024 232.159C40.0388 256.464 53.597 278.03 74.7813 292.889C66.147 324.011 71.9128 355.352 93.1113 375.467C110.748 392.204 135.587 397.866 161.075 393.392C176.976 421.506 203.216 439.592 232.431 438.827C256.738 438.19 278.306 424.629 293.165 403.441C324.287 412.074 355.629 406.308 375.745 385.111C392.482 367.474 398.144 342.637 393.67 317.15C421.78 301.248 439.863 275.01 439.098 245.797C438.462 221.492 424.904 199.926 403.719 185.068C412.353 153.946 406.587 122.605 385.389 102.489C367.752 85.7529 342.913 80.091 317.425 84.5649C301.524 56.4514 275.284 38.3657 246.07 39.1307C221.762 39.7672 200.195 53.328 185.336 74.5162ZM164.408 145.961C157.76 145.117 150.906 144.764 143.909 144.947C121.899 145.523 101.584 151.329 84.8307 160.807C88.8366 183.627 100.968 206.968 120.552 226.127C115.255 230.231 110.159 234.828 105.341 239.905C90.186 255.874 79.9268 274.342 74.7813 292.889C93.7508 306.194 118.835 314.121 146.233 313.821C145.389 320.469 145.035 327.323 145.219 334.321C145.795 356.327 151.6 376.64 161.075 393.392C183.896 389.386 207.238 377.255 226.398 357.671C230.503 362.968 235.099 368.065 240.176 372.883C256.147 388.037 274.617 398.296 293.165 403.441C306.467 384.472 314.393 359.39 314.093 331.996C320.741 332.839 327.595 333.193 334.592 333.01C356.601 332.433 376.916 326.627 393.67 317.15C389.664 294.33 377.532 270.989 357.948 251.829C363.245 247.725 368.341 243.129 373.159 238.052C388.314 222.083 398.573 203.614 403.719 185.068C384.749 171.763 359.665 163.836 332.268 164.135C329.449 186.354 321.157 206.272 309.142 221.557C296.768 217.418 284.248 215.555 272.307 216.034C276.68 204.093 277.98 190.825 276.353 177.238C264.675 183.062 254.505 190.598 246.4 199.381C241.048 187.846 232.586 177.544 221.828 169.087C227.385 152.477 237.043 136.13 250.646 121.796C251.129 121.288 251.614 120.784 252.102 120.285C247.998 114.989 243.401 109.893 238.324 105.075C222.354 89.9202 203.884 79.6611 185.336 74.5162C172.033 93.4849 164.108 118.567 164.408 145.961ZM216.305 205.923C215.826 193.982 217.689 181.462 221.828 169.087C206.544 157.072 186.626 148.78 164.408 145.961C164.415 146.658 164.428 147.358 164.446 148.058C164.964 167.813 169.694 186.202 177.511 201.877C158.207 204.188 138.257 212.41 120.552 226.127C121.051 226.615 121.555 227.101 122.063 227.583C136.398 241.186 152.747 250.845 169.359 256.401C157.344 271.685 149.052 291.603 146.233 313.821C146.93 313.814 147.629 313.801 148.33 313.782C168.084 313.265 186.473 308.535 202.148 300.718C204.46 320.021 212.681 339.968 226.398 357.671C226.886 357.173 227.372 356.669 227.854 356.161C241.457 341.827 251.115 325.479 256.672 308.869C271.956 320.884 291.875 329.176 314.093 331.996C314.085 331.298 314.072 330.6 314.054 329.9C313.537 310.145 308.806 291.754 300.989 276.08C320.294 273.768 340.243 265.547 357.948 251.829C357.449 251.342 356.946 250.856 356.437 250.374C342.102 236.771 325.753 227.113 309.142 221.557C300.685 232.315 290.383 240.777 278.847 246.128C273.752 241.426 268.237 237.42 262.394 234.217C266.627 228.659 269.923 222.544 272.307 216.034C265.378 216.312 258.644 217.379 252.247 219.246C251.31 212.324 249.317 205.669 246.4 199.381C241.698 204.477 237.691 209.992 234.488 215.836C228.93 211.603 222.814 208.307 216.305 205.923ZM219.517 225.983C217.649 219.585 216.583 212.852 216.305 205.923C204.364 201.551 191.097 200.25 177.511 201.877C183.334 213.554 190.87 223.724 199.654 231.829C188.118 237.181 177.816 245.643 169.359 256.401C181.733 260.54 194.253 262.402 206.194 261.923C201.821 273.864 200.52 287.132 202.148 300.718C213.825 294.895 223.996 287.359 232.101 278.575C237.453 290.111 245.914 300.412 256.672 308.869C260.812 296.495 262.674 283.975 262.195 272.034C274.136 276.406 287.403 277.706 300.989 276.08C295.166 264.403 287.63 254.233 278.847 246.128C272.56 249.045 265.906 251.038 258.984 251.975C257.994 248.587 256.781 245.293 255.34 242.114C256.119 241.368 256.883 240.601 257.632 239.812C259.333 238.019 260.92 236.152 262.394 234.217C259.298 232.52 256.11 231.049 252.843 229.819C252.867 228.741 252.864 227.658 252.836 226.57C252.771 224.099 252.573 221.656 252.247 219.246C248.858 220.235 245.564 221.449 242.386 222.889C241.64 222.11 240.872 221.346 240.083 220.598C238.29 218.896 236.423 217.309 234.488 215.836C232.791 218.931 231.32 222.119 230.091 225.386C229.012 225.362 227.929 225.365 226.842 225.393C224.37 225.458 221.927 225.656 219.517 225.983ZM223.16 235.844C221.72 232.665 220.506 229.371 219.517 225.983C212.595 226.92 205.941 228.913 199.654 231.829C204.749 236.531 210.263 240.538 216.107 243.741C211.874 249.299 208.577 255.414 206.194 261.923C213.122 261.645 219.856 260.579 226.254 258.711C227.191 265.633 229.184 272.288 232.101 278.575C236.803 273.48 240.81 267.965 244.013 262.122C249.571 266.354 255.686 269.65 262.195 272.034C261.917 265.105 260.851 258.372 258.984 251.975C256.573 252.301 254.13 252.499 251.659 252.564C250.571 252.593 249.488 252.595 248.41 252.572C249.174 250.542 249.844 248.481 250.418 246.394C252.117 245.054 253.759 243.628 255.34 242.114C254.444 240.137 253.461 238.204 252.389 236.322C252.643 234.175 252.796 232.006 252.843 229.819C250.813 229.056 248.753 228.385 246.665 227.812C245.326 226.113 243.9 224.47 242.386 222.889C240.409 223.785 238.476 224.769 236.594 225.84C234.447 225.586 232.278 225.433 230.091 225.386C229.327 227.416 228.656 229.476 228.083 231.564C226.384 232.903 224.741 234.329 223.16 235.844ZM226.111 241.636C225.04 239.753 224.056 237.821 223.16 235.844C222.381 236.589 221.617 237.357 220.869 238.145C219.167 239.938 217.58 241.806 216.107 243.741C219.202 245.438 222.391 246.909 225.657 248.138C225.634 249.217 225.636 250.299 225.665 251.386C225.73 253.858 225.928 256.301 226.254 258.711C229.642 257.722 232.936 256.508 236.115 255.068C236.861 255.847 237.628 256.611 238.417 257.359C240.21 259.061 242.078 260.648 244.013 262.122C245.709 259.026 247.181 255.838 248.41 252.572C246.223 252.525 244.054 252.372 241.907 252.117C244.874 250.429 247.717 248.521 250.418 246.394C251.322 243.1 251.984 239.738 252.389 236.322C250.701 233.355 248.793 230.512 246.665 227.812C243.371 226.907 240.01 226.245 236.594 225.84C233.627 227.529 230.783 229.436 228.083 231.564C227.179 234.858 226.516 238.22 226.111 241.636ZM231.835 250.146C235.129 251.05 238.491 251.713 241.907 252.117C240.024 253.189 238.092 254.172 236.115 255.068C234.601 253.487 233.174 251.845 231.835 250.146ZM231.835 250.146C229.707 247.446 227.8 244.603 226.111 241.636C225.857 243.783 225.705 245.951 225.657 248.138C227.687 248.902 229.748 249.573 231.835 250.146ZM239.578 249.031C245.095 248.886 249.45 244.297 249.306 238.78C249.161 233.264 244.572 228.909 239.055 229.053C233.539 229.198 229.183 233.787 229.328 239.304C229.472 244.82 234.062 249.175 239.578 249.031Z"
-          fill="#79578d" class="blue" />
-
-      </svg>
-      <svg class="animated-element svg-container float" width="478" height="478" viewBox="0 0 478 478" fill="none"
-        xmlns="http://www.w3.org/2000/svg">
-
-        <path fill-rule="evenodd" clip-rule="evenodd" class="yellow-1"
-          d="M262.393 234.226C266.626 228.668 269.922 222.552 272.306 216.043C265.377 216.321 258.643 217.387 252.245 219.255C251.308 212.332 249.315 205.678 246.398 199.39C241.696 204.486 237.689 210.001 234.487 215.844C228.928 211.612 222.813 208.315 216.304 205.932C216.582 212.86 217.648 219.594 219.516 225.991C212.594 226.929 205.94 228.921 199.652 231.838C204.747 236.54 210.262 240.547 216.105 243.749C211.873 249.307 208.576 255.422 206.192 261.932C213.121 261.654 219.855 260.587 226.253 258.72C227.19 265.642 229.183 272.296 232.1 278.584C236.802 273.489 240.809 267.974 244.012 262.13C249.57 266.363 255.685 269.659 262.194 272.042C261.916 265.114 260.85 258.381 258.982 251.984C265.904 251.046 272.558 249.054 278.846 246.137C273.751 241.435 268.236 237.428 262.393 234.226ZM255.339 242.123C256.118 241.377 256.882 240.609 257.631 239.821C259.332 238.028 260.919 236.16 262.393 234.226C259.297 232.529 256.109 231.058 252.842 229.828C252.866 228.75 252.863 227.666 252.835 226.579C252.77 224.108 252.572 221.665 252.245 219.255C248.857 220.244 245.563 221.458 242.385 222.898C241.638 222.119 240.871 221.355 240.082 220.606C238.289 218.905 236.422 217.318 234.487 215.844C232.79 218.94 231.319 222.128 230.089 225.395C229.011 225.371 227.928 225.374 226.841 225.402C224.369 225.467 221.926 225.665 219.516 225.991C220.505 229.38 221.718 232.674 223.159 235.852C222.38 236.598 221.616 237.365 220.868 238.154C219.166 239.947 217.579 241.815 216.105 243.749C219.201 245.446 222.389 246.918 225.656 248.147C225.633 249.225 225.635 250.308 225.664 251.395C225.728 253.866 225.927 256.309 226.253 258.72C229.641 257.731 232.935 256.517 236.114 255.077C236.86 255.856 237.627 256.62 238.415 257.368C240.209 259.069 242.076 260.657 244.012 262.13C245.708 259.035 247.179 255.847 248.409 252.58C249.487 252.604 250.57 252.601 251.657 252.573C254.129 252.508 256.572 252.31 258.982 251.984C257.993 248.595 256.78 245.301 255.339 242.123Z"
-          fill="#9CB38B" />
-        <path fill-rule="evenodd" clip-rule="evenodd" class="yellow-2"
-          d="M252.149 120.245C252.117 120.242 252.086 120.238 252.055 120.235C252.07 120.255 252.085 120.274 252.101 120.294C251.613 120.793 251.127 121.296 250.645 121.805C237.042 136.139 227.384 152.486 221.827 169.096C206.543 157.081 186.624 148.789 164.406 145.97C164.406 145.926 164.405 145.882 164.405 145.838C164.358 145.876 164.311 145.914 164.264 145.952C164.311 145.958 164.359 145.964 164.406 145.97C164.414 146.667 164.427 147.366 164.445 148.067C164.963 167.821 169.693 186.211 177.51 201.886C158.205 204.197 138.256 212.419 120.551 226.136C120.521 226.107 120.491 226.077 120.461 226.048C120.455 226.105 120.449 226.163 120.443 226.22C120.479 226.192 120.515 226.164 120.551 226.136C121.05 226.624 121.554 227.11 122.062 227.592C136.397 241.195 152.746 250.853 169.358 256.41C157.343 271.694 149.051 291.612 146.231 313.83C146.21 313.83 146.19 313.831 146.169 313.831C146.187 313.853 146.205 313.876 146.223 313.898C146.226 313.875 146.228 313.853 146.231 313.83C146.929 313.823 147.628 313.81 148.328 313.791C168.083 313.274 186.472 308.544 202.146 300.727C204.457 320.022 212.673 339.96 226.38 357.658C226.392 357.659 226.403 357.66 226.415 357.662C226.897 357.169 227.376 356.671 227.853 356.169C241.456 341.836 251.114 325.488 256.671 308.878C271.932 320.875 291.814 329.16 313.993 331.992C314.025 331.966 314.058 331.939 314.091 331.913C314.083 331.246 314.07 330.578 314.053 329.908C313.536 310.153 308.805 291.763 300.988 276.088C320.263 273.781 340.18 265.581 357.865 251.902C357.869 251.858 357.874 251.815 357.879 251.772C357.402 251.306 356.921 250.843 356.436 250.383C342.101 236.78 325.752 227.121 309.141 221.565C321.15 206.288 329.44 186.38 332.263 164.173C332.255 164.164 332.247 164.154 332.24 164.144C331.551 164.152 330.861 164.165 330.17 164.183C310.416 164.7 292.026 169.431 276.352 177.247C274.04 157.944 265.818 137.997 252.101 120.294C252.117 120.278 252.133 120.262 252.149 120.245ZM272.306 216.043C276.679 204.102 277.979 190.834 276.352 177.247C264.674 183.071 254.504 190.607 246.398 199.39C241.047 187.854 232.585 177.553 221.827 169.096C217.687 181.47 215.824 193.99 216.304 205.932C204.363 201.56 191.096 200.259 177.51 201.886C183.333 213.563 190.869 223.733 199.652 231.838C188.116 237.19 177.815 245.652 169.358 256.41C181.732 260.548 194.251 262.411 206.192 261.932C201.82 273.873 200.519 287.14 202.146 300.727C213.824 294.904 223.995 287.367 232.1 278.584C237.452 290.12 245.913 300.421 256.671 308.878C260.81 296.504 262.673 283.984 262.194 272.042C274.135 276.415 287.402 277.715 300.988 276.088C295.165 264.412 287.629 254.242 278.846 246.137C290.382 240.785 300.683 232.323 309.141 221.565C296.767 217.427 284.247 215.564 272.306 216.043Z"
-          fill="#9CB38B" />
-      </svg>
-    </div>
-  </section>
+  <section class="one-fourth-screen sm-mb-50px bg-dark-gray" data-parallax-background-ratio="0.5"
+    style="background-image: url(https://placehold.co/1920x1100)"></section>
   <!-- end section -->
-
   <!-- start section -->
-  <section class="p-0 bg-very-light-gray initial-hidden">
-    <div class="container-fluid">
-      <div
-        class="row row-cols-1 row-cols-lg-4 row-cols-sm-2 justify-content-center align-items-center border-top border-color-light-medium-gray"
-        data-anime='{ "el": "childs", "translateX": [-20, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
-        <!-- start fancy text box item -->
-        <div class="col fancy-text-box-style-01 border-color-light-medium-gray p-0">
-          <div class="text-box-wrapper align-items-center d-flex">
-            <div class="position-relative text-center w-100">
-              <div class="text-box last-paragraph-no-margin p-14">
-                <i class="line-icon-MaleFemale icon-extra-large d-block mb-20px text-base-color"></i>
-                <span class="alt-font text-dark-gray fw-500 fs-22 lg-fs-20 ls-minus-05px">Asesoría Independiente</span>
-                <p>Sin conflictos de interés</p>
-              </div>
-              <div class="text-box-hover p-16 lg-p-12 md-p-17 sm-p-12 xs-p-17">
-                <p class="mb-15px">Decisiones objetivas para el crecimiento de tu patrimonio.</p>
-              </div>
+  <section class="p-0">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10 overlap-section text-center">
+          <div class="p-10 box-shadow-extra-large border-radius-4px bg-white text-center">
+            <a href="demo-consulting-news.html"
+              class="btn btn-large btn-base-color btn-box-shadow fw-400 ps-20px pe-20px pt-5px pb-5px btn-round-edge-small mb-3 sm-mb-15px">Fashion</a>
+            <h3 class="alt-font text-dark-gray ls-minus-1px fw-600 mb-15px">Better to see something once than hear about
+              it a thousand times</h3>
+            <div class="lg-mb-20px sm-mb-0">
+              <span>By <a href="demo-consulting-news.html" class="text-dark-gray">Shane smith</a></span> on <a
+                href="demo-consulting-news.html" class="text-dark-gray">26 March 2021</a>
             </div>
           </div>
         </div>
-        <!-- end fancy text box item -->
-        <!-- start fancy text box item -->
-        <div class="col fancy-text-box-style-01 border-color-light-medium-gray p-0 md-border-end-0">
-          <div class="text-box-wrapper align-items-center d-flex">
-            <div class="position-relative text-center w-100">
-              <div class="text-box last-paragraph-no-margin p-14">
-                <i class="line-icon-Globe-2 icon-extra-large d-block mb-20px text-base-color"></i>
-                <span class="alt-font text-dark-gray fw-500 fs-22 lg-fs-20 ls-minus-05px">Acceso Global</span>
-                <p>Inversiones globales</p>
-              </div>
-              <div class="text-box-hover p-16 lg-p-12 md-p-17 sm-p-12 xs-p-17">
-                <p class="mb-15px">Diversificación sin límites, donde tú elijas.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- end fancy text box item -->
-        <!-- start fancy text box item -->
-        <div class="col fancy-text-box-style-01 border-color-light-medium-gray p-0">
-          <div class="text-box-wrapper align-items-center d-flex">
-            <div class="position-relative text-center w-100">
-              <div class="text-box last-paragraph-no-margin p-14">
-                <i class="line-icon-Money-Bag icon-extra-large d-block mb-20px text-base-color"></i>
-                <span class="alt-font text-dark-gray fw-500 fs-22 lg-fs-20 ls-minus-05px">Optimización
-                  Patrimonial</span>
-                <p>Planes personalizados</p>
-              </div>
-              <div class="text-box-hover p-16 lg-p-12 md-p-17 sm-p-12 xs-p-17">
-                <p class="mb-15px">Tu dinero trabaja de forma eficiente y estratégica.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- end fancy text box item -->
-        <!-- start fancy text box item -->
-        <div class="col fancy-text-box-style-01 border-color-light-medium-gray p-0">
-          <div class="text-box-wrapper align-items-center d-flex">
-            <div class="position-relative text-center w-100">
-              <div class="text-box last-paragraph-no-margin p-14">
-                <i class="line-icon-Lock-2 icon-extra-large d-block mb-20px text-base-color"></i>
-                <span class="alt-font text-dark-gray fw-500 fs-22 lg-fs-20 ls-minus-05px">Seguridad</span>
-                <p>Control sobre tu inversión</p>
-              </div>
-              <div class="text-box-hover p-16 lg-p-12 md-p-17 sm-p-12 xs-p-17">
-                <p class="mb-15px">Tu capital en instituciones reguladas, sin costos ocultos.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- end fancy text box item -->
       </div>
     </div>
   </section>
   <!-- end section -->
   <!-- start section -->
-  <section id="down-section" class="position-relative">
-    <div id="particles-01" data-particle="true"
-      data-particle-options='{"particles": {"number": {"value": 5,"density": {"enable": true,"value_area": 1000}},"color":{"value":["#b7b9be", "#dd6531"]},"shape": {"type": "circle","stroke":{"width":0,"color":"#000000"}},"opacity": {"value": 0.5,"random": false,"anim": {"enable": false,"speed": 1,"sync": false}},"size": {"value": 8,"random": true,"anim": {"enable": false,"sync": true}},"move": {"enable": true,"speed":2,"direction": "right","random": false,"straight": false}},"interactivity": {"detect_on": "canvas","events": {"onhover": {"enable": false,"mode": "repulse"},"onclick": {"enable": false,"mode": "push"},"resize": true}},"retina_detect": false}'
-      class="position-absolute h-100 top-0 left-0 z-index-minus-1"></div>
+  <section class="overlap-section text-center p-0 sm-pt-30px">
+    <img class="rounded-circle box-shadow-extra-large w-130px h-130px border border-8 border-color-white"
+      src="https://placehold.co/125x125" alt="">
+  </section>
+  <!-- end section -->
+  <!-- start section -->
+  <section class="pb-0 pt-3">
     <div class="container">
-      <div class="row align-items-center justify-content-center text-center text-lg-start">
-        <div class="col-xl-5 col-lg-6 md-mb-50px"
-          data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 100, "easing": "easeOutQuad" }'>
-          <h2 class="text-dark-gray fw-600 ls-minus-2px">Hemos ayudado a inversionistas a hacer crecer su patrimonio.
-          </h2>
-          <span class="fw-600 fs-20 mb-5px text-dark-gray d-inline-block">Gestión y Planificación Financiera</span>
-          <p class="w-80 sm-w-100 mx-auto mx-lg-0">Aseguramos que cada inversión esté alineada con tus objetivos y
-            resguardada en instituciones de prestigio.</p>
-          <span class="fw-600 fs-20 mb-5px text-dark-gray d-inline-block">Estrategia de Inversión y Análisis de
-            Mercados</span>
-          <p class="w-80 sm-w-100 mx-auto mx-lg-0">Accedemos a las mejores oportunidades de inversión global, combinando
-            análisis de mercado y gestión de riesgos.</p>
-          <a href="/acerca-de" class="btn btn-medium btn-dark-gray btn-box-shadow btn-round-edge mt-10px">Conoce más
-            sobre FinOasis</a>
+      <div class="row justify-content-center">
+        <div class="col-lg-9 dropcap-style-01"
+          data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+          <p class="mb-6"><span class="alt-font first-letter text-dark-gray">M</span>lorem ipsum dolor sit amet
+            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua. Ut enim ad minim
+            veniam, quis nostrud exercitation and ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+            cupidatat non sunt in culpa qui.</p>
+          <div class="row">
+            <div class="col-md-6 sm-mb-30px">
+              <div
+                class="border-radius-5px border-1 border border-color-light-medium-gray h-100 pt-8 pb-8 ps-10 pe-10 last-paragraph-no-margin">
+                <span class="fw-500 text-dark-gray mb-5px d-inline-block">A balanced diet is a cookie in hand</span>
+                <p>Lorem ipsum is simply dummy text of the printing typesetting industry lorem Ipsum been industry's
+                  standard dummy.</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div
+                class="border-radius-5px border-1 border border-color-light-medium-gray h-100  pt-8 pb-8 ps-10 pe-10 last-paragraph-no-margin">
+                <span class="fw-500 text-dark-gray mb-5px d-inline-block">Nature is wears the bright colors</span>
+                <p>Lorem ipsum is simply dummy text of the printing typesetting industry lorem Ipsum been industry's
+                  standard dummy.</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-lg-6 col-md-11 offset-xl-1">
-          <figure class="position-relative md-ps-40px border-radius-5px"
-            data-anime='{ "effect": "slide", "color": "#292d36", "direction":"lr", "easing": "easeOutQuad", "delay":0}'>
-            <img loading="lazy" height="561" width="570"
-              src="/.netlify/images?url=/images/services.jpg?&fit=cover&w=570&h=561&fm=webp" alt=""
-              class="border-radius-5px w-100">
-            <figcaption
-              class="position-absolute bottom-minus-20px xs-bottom-minus-60px left-minus-50px lg-left-minus-20px xs-left-minus-0px text-white text-center last-paragraph-no-margin w-60 lg-w-70 md-w-60 xs-w-280px atropos"
-              data-atropos>
-              <div class="atropos-scale overflow-hidden border-radius-5px"
-                data-anime='{ "effect": "slide", "color": "#dd6531", "direction":"lr", "easing": "easeOutQuad", "delay":500}'>
-                <div class="atropos-rotate">
-                  <div
-                    class="atropos-inner border-radius-5px bg-base-color text-white ps-12 pe-12 pt-60px pb-60px sm-p-20px sm-pt-30px sm-pb-30px">
-                    <div data-atropos-offset="3">
-                      <i class="line-icon-Loop icon-double-large mb-25px"></i>
-                      <span class="fs-22 sm-fs-20 mb-5px d-block">Oportunidades sin límites</span>
-                      <p class="opacity-7 fw-300">Explora estrategias financieras diseñadas para potenciar tu
-                        crecimiento y optimizar tu patrimonio.</p>
-                    </div>
-                  </div>
+      </div>
+    </div>
+  </section>
+  <!-- end section -->
+  <!-- start section -->
+  <section class="half-section"
+    data-anime='{ "translateY": [0, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 position-relative">
+          <img src="https://placehold.co/1190x750" alt="">
+          <a href="https://player.vimeo.com/video/75976293"
+            class="text-center bg-white rounded-circle video-icon-box video-icon-large popup-vimeo slide-up-animation absolute-middle-center">
+            <span>
+              <span class="video-icon bg-base-color">
+                <i class="fa-solid fa-play text-white"></i>
+                <span class="video-icon-sonar">
+                  <span class="video-icon-sonar-bfr bg-base-color"></span>
+                </span>
+              </span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end section -->
+  <!-- start section -->
+  <section class="py-0">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-9 last-paragraph-no-margin"
+          data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+          <h6 class="alt-font fw-500 text-dark-gray ls-minus-05px mb-15px">Success is the result of perfection and hard
+            work</h6>
+          <p class="mb-5">Lorem ipsum dolor sit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint
+            occaecat.</p>
+          <h6 class="alt-font fw-500 text-dark-gray ls-minus-05px mb-15px">It is better to fail in originality than to
+            succeed in imitation</h6>
+          <p>Lorem ipsum dolor sit sed do eiusmod tempor incididunt ut labore enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+            in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end section -->
+  <!-- start section -->
+  <section class="half-section pb-0">
+    <div class="container">
+      <div class="row justify-content-center"
+        data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+        <div class="mb-6">
+          <img src="https://placehold.co/1190x750" alt="">
+        </div>
+        <div class="col-lg-9 last-paragraph-no-margin">
+          <h6 class="alt-font fw-500 text-dark-gray ls-minus-05px mb-15px">Success is the result of perfection and hard
+            work</h6>
+          <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+            dolores eos qui ratione sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+            consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt. Nemo enim ipsam voluptatem quia
+            voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione sequi nesciunt
+            numquam eius modi tempora incidunt.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end section -->
+  <!-- start section -->
+  <section class="half-section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-9"
+          data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+          <div class="row mb-30px">
+            <div class="tag-cloud col-md-9 text-center text-md-start sm-mb-15px">
+              <a href="demo-consulting-news.html">Development</a>
+              <a href="demo-consulting-news.html">Event</a>
+              <a href="demo-consulting-news.html">Multimedia </a>
+              <a href="demo-consulting-news.html">Fashion</a>
+            </div>
+            <div class="tag-cloud col-md-3 text-uppercase text-center text-md-end">
+              <a class="likes-count fw-500 mx-0" href="#"><i class="fa-regular fa-heart text-red me-10px"></i><span
+                  class="text-dark-gray text-dark-gray-hover">05 Likes</span></a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 mb-6">
+              <div
+                class="d-block d-md-flex w-100 box-shadow-extra-large align-items-center border-radius-4px p-7 sm-p-35px">
+                <div class="w-140px text-center me-50px sm-mx-auto">
+                  <img src="https://placehold.co/200x200" class="rounded-circle w-120px" alt="">
+                  <a href="demo-consulting-news.html" class="text-dark-gray fw-500 mt-20px d-inline-block lh-20">Colene
+                    Landin</a>
+                  <span class="fs-15 lh-20 d-block sm-mb-15px">Co-founder</span>
+                </div>
+                <div class="w-75 sm-w-100 text-center text-md-start last-paragraph-no-margin">
+                  <p>Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the
+                    industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type.</p>
+                  <a href="demo-consulting-news.html" class="btn btn-link btn-large text-dark-gray mt-15px">All author
+                    posts</a>
                 </div>
               </div>
-            </figcaption>
-          </figure>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-12 text-center elements-social social-icon-style-04">
+              <ul class="medium-icon dark">
+                <li><a class="facebook" href="https://www.facebook.com/" target="_blank"><i
+                      class="fa-brands fa-facebook-f"></i><span></span></a></li>
+                <li><a class="twitter" href="http://www.twitter.com" target="_blank"><i
+                      class="fa-brands fa-twitter"></i><span></span></a></li>
+                <li><a class="instagram" href="http://www.instagram.com" target="_blank"><i
+                      class="fa-brands fa-instagram"></i><span></span></a></li>
+                <li><a class="linkedin" href="http://www.linkedin.com" target="_blank"><i
+                      class="fa-brands fa-linkedin-in"></i><span></span></a></li>
+                <li><a class="behance" href="http://www.behance.com/" target="_blank"><i
+                      class="fa-brands fa-behance"></i><span></span></a></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
   <!-- end section -->
-  <!-- start section -->
-  <section class="bg-very-light-gray">
-    <div class="container">
-      <div class="row justify-content-center mb-4">
-        <div class="col-lg-7 text-center"
-          data-anime='{"opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-          <span class="fw-600 ls-1px fs-16 alt-font d-inline-block text-uppercase mb-5px text-base-color">Soluciones
-            Financieras Inteligentes</span>
-          <h2 class="alt-font text-dark-gray fw-600 ls-minus-2px">Servicios Financieros</h2>
-        </div>
-      </div>
-      <div class="row row-cols-1 row-cols-lg-2 row-cols-md-2 justify-content-center"
-        data-anime='{ "el": "childs", "willchange": "transform", "scale": [0.9, 1], "opacity": [0,1], "duration": 600, "delay": 100, "staggervalue": 200, "easing": "easeOutQuad" }'>
-        <!-- start features box item -->
-        <div class="col icon-with-text-style-04 transition-inner-all mb-30px">
-          <div
-            class="feature-box h-100 justify-content-start border-radius-5px bg-white box-shadow-quadruple-large box-shadow-quadruple-large-hover p-18 md-p-16 last-paragraph-no-margin">
-            <div class="feature-box-icon">
-              <a href="/servicios/gestion-de-inversiones" aria-labelledby="Gestion de inversiones"><i
-                  class="line-icon-Management icon-double-large text-base-color mb-25px"></i></a>
-            </div>
-            <div class="feature-box-content">
-              <a href="/servicios/gestion-de-inversiones"
-                class="d-inline-block alt-font text-dark-gray fw-600 mb-5px fs-20">Gestión de Inversiones</a>
-              <p>Tu patrimonio, optimizado al máximo.</p>
-            </div>
-          </div>
-        </div>
-        <!-- end features box item -->
-        <!-- start features box item -->
-        <div class="col icon-with-text-style-04 transition-inner-all mb-30px">
-          <div
-            class="feature-box h-100 justify-content-start border-radius-5px bg-white box-shadow-quadruple-large box-shadow-quadruple-large-hover p-18 md-p-16 last-paragraph-no-margin">
-            <div class="feature-box-icon">
-              <a href="/servicios/coaching-financiero" aria-labelledby="Coaching financiero"><i
-                  class="line-icon-Money-2 icon-double-large text-base-color mb-25px"></i></a>
-            </div>
-            <div class="feature-box-content">
-              <a href="/servicios/coaching-financiero"
-                class="d-inline-block alt-font text-dark-gray fw-600 mb-5px fs-20">Coaching Financiero</a>
-              <p>Resuelve cualquier duda con un experto.</p>
-            </div>
-          </div>
-        </div>
-        <!-- end features box item -->
-        <!-- start features box item -->
-        <div class="col icon-with-text-style-04 transition-inner-all mb-30px">
-          <div
-            class="feature-box h-100 justify-content-start border-radius-5px bg-white box-shadow-quadruple-large box-shadow-quadruple-large-hover p-18 md-p-16 last-paragraph-no-margin">
-            <div class="feature-box-icon">
-              <a href="/servicios/ahorro-para-la-educacion" aria-labelledby="Ahorro para la educación"><i
-                  class="line-icon-Money icon-double-large text-base-color mb-25px"></i></a>
-            </div>
-            <div class="feature-box-content">
-              <a href="/servicios/ahorro-para-la-educacion"
-                class="d-inline-block alt-font text-dark-gray fw-600 mb-5px fs-20">Planes de Ahorro para Educación</a>
-              <p>Seguridad para el futuro de tu familia.</p>
-            </div>
-          </div>
-        </div>
-        <!-- end features box item -->
-        <!-- start features box item -->
-        <div class="col icon-with-text-style-04 transition-inner-all mb-30px">
-          <div
-            class="feature-box h-100 justify-content-start border-radius-5px bg-white box-shadow-quadruple-large box-shadow-quadruple-large-hover p-18 md-p-16 last-paragraph-no-margin">
-            <div class="feature-box-icon">
-              <a href="/servicios/inversiones-extranjeras" aria-labelledby="Inversiones Extranjeras"><i
-                  class="line-icon-Globe icon-double-large text-base-color mb-25px"></i></a>
-            </div>
-            <div class="feature-box-content">
-              <a href="/servicios/inversiones-extranjeras"
-                class="d-inline-block alt-font text-dark-gray fw-600 mb-5px fs-20">Asesoría en Inversiones <br> en el
-                Extranjero</a>
-              <p>Expande tu portafolio sin fronteras.</p>
-            </div>
-          </div>
-        </div>
-        <!-- end features box item -->
-      </div>
-      <div class="row mt-6"
-        data-anime='{ "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 100, "staggervalue": 100, "easing": "easeOutQuad" }'>
-        <div class="col-12 text-center">
-          <h6 class="text-dark-gray ls-minus-1px lh-inherit m-0">¡Nuestros
-            <span class="fw-600 text-decoration-line-bottom-medium">expertos</span> están listos para impulsar tu
-            inversión!
-          </h6>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- end section -->
-  <!-- start section -->
-  <section class="position-relative border-bottom border-color-extra-medium-gray">
-    <div id="particles-02" data-particle="true"
-      data-particle-options='{"particles": {"number": {"value": 5,"density": {"enable": true,"value_area": 1000}},"color":{"value":["#b7b9be", "#dd6531"]},"shape": {"type": "circle","stroke":{"width":0,"color":"#000000"}},"opacity": {"value": 0.5,"random": false,"anim": {"enable": false,"speed": 1,"sync": false}},"size": {"value": 8,"random": true,"anim": {"enable": false,"sync": true}},"move": {"enable": true,"speed":2,"direction": "right","random": false,"straight": false}},"interactivity": {"detect_on": "canvas","events": {"onhover": {"enable": false,"mode": "repulse"},"onclick": {"enable": false,"mode": "push"},"resize": true}},"retina_detect": false}'
-      class="position-absolute h-100 top-0 left-0 z-index-minus-1"></div>
-    <div class="container">
-      <div class="row justify-content-center mb-2">
-        <div class="col-lg-7 text-center"
-          data-anime='{ "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-          <span class="fw-600 ls-1px fs-16 alt-font d-inline-block text-uppercase mb-5px text-base-color">Lo que dicen
-            nuestros clientes</span>
-          <h2 class="alt-font text-dark-gray fw-600 ls-minus-2px">Client testimonials</h2>
-        </div>
-      </div>
-      <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2 justify-content-center"
-        data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-        <!-- start testimonial item -->
-        <div class="col md-mb-30px">
-          <div class="testimonials testimonials-style-05 last-paragraph-no-margin">
-            <div
-              class="testimonials-bubble border-radius-5px border border-color-extra-medium-gray bg-white pt-30px pb-30px ps-40px pe-40px lg-p-25px mb-35px">
-              <p>Encontré en Ernesto una asesoría transparente y comprometida con mi crecimiento financiero. Su asesoría
-                hace toda la diferencia.</p>
-            </div>
-            <div class="author ps-20px pe-20px">
-              <img loading="lazy" height="148" width="148" class="rounded-circle w-85px me-15px"
-                src="/.netlify/images?url=/images/finoasis-icon.png?&fit=cover&w=148&h=148&fm=webp" alt="">
-              <div class="d-inline-block align-middle lh-20">
-                <span class="fw-600 fs-18 text-dark-gray d-block mb-5px">Krauze</span>
-                <div class="fs-15">Inversionista</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- end testimonial item -->
-        <!-- start testimonial item -->
-        <div class="col md-mb-30px">
-          <div class="testimonials testimonials-style-05 last-paragraph-no-margin">
-            <div
-              class="testimonials-bubble border-radius-5px border border-color-extra-medium-gray bg-white pt-30px pb-30px ps-40px pe-40px lg-p-25px mb-35px">
-              <p>Invertir con Enesto me dio acceso a instituciones globales sin conflictos de interés. Ahora tengo un
-                plan sólido para
-                mi futuro.</p>
-            </div>
-            <div class="author ps-20px pe-20px">
-              <img class="rounded-circle w-85px me-15px" loading="lazy" height="148" width="148"
-                src="/.netlify/images?url=/images/finoasis-icon.png?&fit=cover&w=148&h=148&fm=webp" alt="">
-              <div class="d-inline-block align-middle lh-20">
-                <span class="fw-600 fs-18 text-dark-gray d-block mb-5px">Sofía</span>
-                <div class="fs-15">Inversionista</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- end testimonial item -->
-        <!-- start testimonial item -->
-        <div class="col">
-          <div class="testimonials testimonials-style-05 last-paragraph-no-margin">
-            <div
-              class="testimonials-bubble border-radius-5px border border-color-extra-medium-gray bg-white pt-30px pb-30px ps-40px pe-40px lg-p-25px mb-35px">
-              <p>Su enfoque estratégico y personalizado ha optimizado mis inversiones como nunca antes. Confianza total
-                en su gestión.</p>
-            </div>
-            <div class="author ps-20px pe-20px">
-              <img class="rounded-circle w-85px me-15px" loading="lazy" height="148" width="148"
-                src="/.netlify/images?url=/images/finoasis-icon.png?&fit=cover&w=148&h=148&fm=webp" alt="">
-              <div class="d-inline-block align-middle lh-20">
-                <span class="fw-600 fs-18 text-dark-gray d-block mb-5px">Ricardo</span>
-                <div class="fs-15">Inversionista</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- end testimonial item -->
-      </div>
-    </div>
-  </section>
-  <!-- end section -->
-
+   
 
   <!-- start footer -->
   <footer class="footer-light p-0 position-relative">
@@ -1826,7 +1688,7 @@
           <ul>
             <li><a href="/">Inicio</a></li>
             <li><a href="/acerca-de">Acerca de</a></li>
-            <li><a class="current-page disabled-link" href="/servicios">Servicios</a></li>
+            <li><a href="/servicios">Servicios</a></li>
             <li><a href="/blog">Blog</a></li>
             <li><a href="/contacto">Contacto</a></li>
           </ul>
@@ -1902,7 +1764,6 @@
     dropdownMobileItem.addEventListener("click", () => {
       dropdownMobileItem.classList.toggle("visible");
     });
-
 
 
     const dropdownCustomItem = document.querySelector(".dropdown-custom-item");
